@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">HookAPK</string>
+    <string name="cancel_button_label">取消</string>
+    <string name="choose_button_label">选择</string>
+    <string name="error_dir_access">无法访问目录</string>
+    <string name="label_parent_directory">上级目录</string>
+    <string name="last_edit">最后修改：</string>
+    <string name="hello_blank_fragment">fragment</string>
+    <string name="accessibility_service_description">开启功能, 以跟踪栈顶 Activity</string>
+    <string name="drawer_open">打开</string>
+    <string name="drawer_close">关闭</string>
+    <string name="action_main_settings">Settings</string>
+    <string name="nav_header_text">点击开始进入</string>
+    <string name="nav_about">关于</string>
+    <string name="a">打开记录Activity</string>
+</resources>

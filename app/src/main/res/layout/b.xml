@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:gravity="center">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="100dp"
+		android:gravity="center"
+		android:background="#FF5555">
+
+		<TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="Activity"
+			android:textColor="#FFFFFF"
+			android:textSize="36sp"
+			android:textStyle="bold"
+			android:background="#FF5555"
+			android:gravity="center"
+			android:padding="5dp"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="match_parent"
+			android:text="&gt;&gt;&gt;&gt;&gt;点击关闭&lt;&lt;&lt;&lt;&lt;"
+			android:id="@+id/c"
+			android:textColor="#FF5555"
+			android:gravity="center"
+			android:background="#FFFFFF"
+			android:textSize="24sp"
+			android:layout_margin="5dp"
+			android:paddingLeft="60dp"
+			android:paddingRight="60dp"/>
+
+	</LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="?android:attr/background">
+    <include
+        android:id="@+id/header"
+        layout="@layout/dialog_header" />
+    <include
+        android:id="@+id/fileList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header"
+        layout="@layout/dialog_file_list" />
+    <include
+        android:id="@+id/footer"
+        layout="@layout/dialog_footer" />
+</RelativeLayout>

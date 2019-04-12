@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Gradle: com.jaredrummler:colorpicker:1.1.0@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/colorpicker-1.1.0.aar/283526f1764a234439c0abe7ccd4e872/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/colorpicker-1.1.0.aar/283526f1764a234439c0abe7ccd4e872/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/colorpicker-1.1.0.aar/283526f1764a234439c0abe7ccd4e872/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.jaredrummler/colorpicker/1.1.0/c589988acbf68d83925eaaa3286744e28799b6dd/colorpicker-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/main_card_margin_horizontal"
+    android:layout_marginTop="@dimen/main_card_margin_vertical"
+    android:layout_marginRight="@dimen/main_card_margin_horizontal"
+    android:layout_marginBottom="@dimen/main_card_margin_vertical"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="2dp">
+    <RelativeLayout
+        android:padding="5dp"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_card_about_1"
+            android:layout_width="64dp"
+            android:layout_height="128dp"
+            android:src="@mipmap/android"
+            android:scaleType="centerInside" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/card_title_margin"
+            android:layout_marginEnd="@dimen/text_margin"
+            android:layout_toEndOf="@+id/img_card_about_1"
+            android:layout_marginLeft="@dimen/card_title_margin"
+            android:layout_marginRight="@dimen/text_margin"
+            android:layout_toRightOf="@+id/img_card_about_1">
+            <TextView
+                android:textStyle="bold"
+                android:textColor="@color/colorAccent"
+                android:id="@+id/tv_card_about_1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name" />
+            <TextView
+                android:textStyle="italic"
+                android:id="@+id/tv_about_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_margin_small"
+                android:layout_below="@+id/tv_card_about_1_1"
+                android:lineSpacingExtra="@dimen/text_margin_small" />
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

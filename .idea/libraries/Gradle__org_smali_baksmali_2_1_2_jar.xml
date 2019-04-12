@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.smali:baksmali:2.1.2@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.smali/baksmali/2.1.2/4fd3c0b40d757b4699675f5a1aa357dc28e2f242/baksmali-2.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.smali/baksmali/2.1.2/a8314b118e1efb2fb8a518a4935d2beda63f2b60/baksmali-2.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

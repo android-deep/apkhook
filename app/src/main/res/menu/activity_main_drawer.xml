@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:id="@+id/group_qun">
+        <item
+            android:id="@+id/nav_qun"
+            android:title="QQ群" />
+    </group>
+    <group android:id="@+id/group_sz">
+        <item
+            android:id="@+id/nav_sz"
+            android:title="设置" />
+    </group>
+    <group android:id="@+id/group_about">
+        <item
+            android:id="@+id/nav_about"
+            android:title="关于" />
+    </group>
+</menu>
+

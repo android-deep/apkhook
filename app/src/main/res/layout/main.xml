@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/mRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/qj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:checked="true"
+                android:text="全局模式" />
+
+            <RadioButton
+                android:id="@+id/dl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="单例模式" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/aaa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="全局模式 功能开关区勾选表示开启"
+                android:textColor="#FF000000" />
+            <CheckBox
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="授权成功顶部显示广告条以及到期时间"
+                android:id="@+id/Ad"/>
+            <CheckBox
+                android:id="@+id/chou"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="高级防破解 抽代码" />
+
+            <CheckBox
+                android:id="@+id/JiaGu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="跳加固 支持部分加固兼容性自己测试" />
+
+            <CheckBox
+                android:id="@+id/New360"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="跳最新360"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/keylayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone">
+
+                <AutoCompleteTextView
+                    android:id="@+id/key"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionHint="最近的数据"
+                    android:completionThreshold="1"
+                    android:hint="抽代码加密密钥 长按可随机更换"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/appid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:completionHint="最近的数据"
+                android:completionThreshold="1"
+                android:hint="Appid"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+<!--add-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/SingleLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="标题"
+                android:completionHint="最近的数据"
+                android:completionThreshold="1"
+                android:inputType="textUri"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/GetExpired"
+                android:completionHint="最近的数据"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="编辑框内容"
+                android:completionThreshold="1"
+                android:inputType="textUri"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/Color"
+                android:completionHint="最近的数据"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="颜色HEX 例子 #FF3F5972 点击编辑框可选择颜色"
+                android:completionThreshold="1"
+                android:inputType="textUri"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/Ver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:completionHint="最近的数据"
+                android:completionThreshold="1"
+                android:hint="版本号"
+                android:inputType="number" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/zhuru"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="#956C6A6F"
+            android:text="注入"
+            android:textColor="#FFFFFFFF" />
+    </LinearLayout>
+</RelativeLayout>
+

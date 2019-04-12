@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+	android:title="设置"
+    android:layout_height="match_parent">
+	<PreferenceCategory
+        android:title="关于">
+		<Preference
+			android:summary="V 3.0"
+			android:title="当前版本" />
+        <Preference
+			android:summary="开发者:1976222027"
+			android:title="QQ群:544822966" />
+    </PreferenceCategory>
+	
+</PreferenceScreen>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="10sp" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="反射大师注册机：" />
+
+    <EditText
+        android:id="@+id/Number"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入设备码" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="结果：" />
+
+    <EditText
+        android:focusable="false"
+        android:id="@+id/Content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="注册码"
+        />
+
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="生成并复制注册码"
+        android:onClick="send"
+        />
+
+    <Button
+        android:id="@+id/btnVIP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="VIP功能"
+        android:onClick="send"
+        />
+
+    <Button
+        android:id="@+id/btnDex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="逆向注入"
+        android:onClick="send"
+        />
+    <Button
+        android:id="@+id/btnAct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Activity"
+        android:onClick="send"
+        />
+
+
+</LinearLayout>

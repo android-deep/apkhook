@@ -1,0 +1,181 @@
+import java.text.DateFormat
+import java.text.SimpleDateFormat
+
+//import android.content.res.Configuration
+
+apply plugin: 'com.android.application'
+//记录bulid时间
+def currentTime = getCurrentTime()
+
+static def getCurrentTime() {
+    DateFormat df = new SimpleDateFormat("yyyy年MM月dd日")
+    return df.format(Calendar.getInstance(Locale.CHINA).getTime())
+}
+
+static def getMyVersionName() {
+    int year = Integer.parseInt(new Date().format("yyyy")) - 2018
+    return year + "." + new Date().format("MMdd")
+}
+
+static def getMyVersionCode() {
+    return Integer.parseInt(new SimpleDateFormat("yyMMddHHmm").format(new Date()))
+}
+
+android {
+    flavorDimensions "default"
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    /**
+     * 用multiDexEnabled true时，
+     * 在5.0以下的手机上跑不起来，  分包和不检查方法数2选1
+     * 忽略方法数限制的检查。设置dexOptions的，不做方法数限制的检查，这样做的缺点是apk无法再低版本的设备上面安装
+     */
+    dexOptions {
+        jumboMode true
+    }
+    //添加如下配置就可以sdk26以下打包sdk28compilesdk了
+    lintOptions {
+        //build release 版本 时 是否开启lint 检测
+        checkReleaseBuilds true
+        // Or, if you prefer, 可以继续检查发布版本中的错误，
+        //但是即使发现错误也要继续构建： //lint时遇到error时继续构建
+        abortOnError false
+    }
+    //multiDex的一些相关配置，这样配置可以让你的编译速度更快
+    dexOptions {
+        preDexLibraries = false
+        //让它不要对Lib做preDexing
+        // incremental true  弃用
+        //开启incremental dexing,优化编译效率，这个功能android studio默认是关闭的。
+        javaMaxHeapSize "4g"     //增加java堆内存大小，避免导致编译时出现OOM异常
+    }
+    useLibrary 'org.apache.http.legacy'
+    compileSdkVersion 28
+    defaultConfig {
+        multiDexEnabled true    // true时，生成多个dex
+        applicationId "ma.mhy.apkhook"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode getMyVersionCode()
+        versionName getMyVersionName()
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        ndk {//bugly
+//            // moduleName "zbar"//编译出so名字
+//            //设置支持的SO库架构
+//            abiFilters 'armeabi', 'armeabi-v7a', 'x86'
+//            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64', 'arm64-v8a'
+//        }
+    }
+    //release版本输出包名自动追加版本号和版本名称
+    applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                if (buildType.name == 'release') {
+                    outputFileName = "APKHook_v" + defaultConfig.versionName + "_" + productFlavors.name + "_.apk"
+//                      // outputFileName = "app_v${defaultConfig.versionName}_${variant.name}_${releaseTime()}.apk"
+                }
+                if (buildType.name == 'debug') {
+                    outputFileName = "APKHook_v" + productFlavors.name + "_" + buildType.name + ".apk"
+//
+                }
+            }
+
+    }
+    buildTypes {
+        release {
+            buildConfigField("String", "apkBuildTime", "\"${currentTime}\"")
+//            signingConfig signingConfigs.release
+            zipAlignEnabled true
+            minifyEnabled false
+            pseudoLocalesEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            buildConfigField("String", "apkBuildTime", "\"${currentTime}\"")
+            debuggable true
+            zipAlignEnabled true//是否对APK包执行ZIP对齐优化，减小zip体积，增加运行效率
+            //   applicationIdSuffix ".beta"//在applicationId 中添加了一个后缀
+            versionNameSuffix "-debug"  //versionName的后缀 beta  debug
+            minifyEnabled false
+            pseudoLocalesEnabled false
+            // shrinkResources true
+//            signingConfig signingConfigs.release//使用正式签名
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //分包对lib 不优化
+    dexOptions {
+        preDexLibraries = false
+    }
+}
+
+dependencies {
+//    configurations.all() {
+//        Configuration configuration ->
+////            configuration.resolutionStrategy.force(['androidx.annotation:annotation:1.0.0'])
+//            //或者这样写
+//            resolutionStrategy.setForcedModules(['androidx.annotation:annotation:1.0.0'])
+//    }
+//    configurations.all {
+//        resolutionStrategy {
+//            force 'androidx.annotation:annotation:1.0.2'
+//        }
+//    }
+//    implementation 'androidx.annotation:annotation:1.0.2'//    implementation(group: 'com.alibaba', name: 'dubbo', version: '2.6.5') {
+
+//        //当项目有多个dubbo包依赖时，我们可以在父项目强制统一版本号为2.6.5:
+//        force = true
+//        //排除包所有的spring-core 模块
+//        exclude module: 'spring-core'
+//        //排除指定的单个模块，排除springframework中的spring-beans
+//        exclude group: 'org.springframework',module:'spring-beans'
+//        //排除springframework整个包
+//        exclude group: 'org.springframework'
+//        //禁止传递依赖，dubbo依赖的其他包都不能传递依赖
+//        transitive = false
+//    }
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha04'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0-alpha03'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha03'
+//        exclude  module: 'annotation'
+//    })
+    //    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.google.android.material:material:1.1.0-alpha05'
+    implementation 'com.github.angads25:filepicker:1.1.1'
+    implementation 'com.jaredrummler:colorpicker:1.1.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    //    implementation 'com.alibaba:fastjson:1.2.47.android'
+    implementation 'androidx.cardview:cardview:1.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.zhy:okhttputils:2.6.2'
+    //引入ButterKnife//注解
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor "com.jakewharton:butterknife-compiler:10.0.0"
+    implementation 'com.google.code.gson:gson:2.8.5'
+//    implementation 'commons-codec:commons-codec:1.12'//apace
+//    implementation 'com.google.guava:guava:24.1-jre'
+
+    implementation 'de.greenrobot:eventbus:2.4.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    implementation 'androidx.browser:browser:1.0.0'
+    //    implementation 'org.antlr:antlr4-runtime:4.7.2'
+//        implementation  'org.antlr:antlr-runtime: 3.5.2'
+//        implementation 'org.smali:dexlib2:2.2.7'
+//        implementation 'org.smali:baksmali:2.2.7'
+//        implementation 'org.smali:smali:2.2.7'
+//        implementation 'org.smali:util:2.2.7'
+    //    implementation 'org.smali:util2:2.0.0'
+
+    //    compile group: 'org.smali', name: 'dexlib', version: '1.4.0'
+//    implementation 'com.madgag.spongycastle:pkix:1.53.0.0'
+//    implementation 'com.madgag.spongycastle:prov:1.53.0.0'
+//    implementation 'com.madgag.spongycastle:core:1.53.0.0'
+}
