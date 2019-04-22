@@ -4,7 +4,7 @@
  *  this work for additional information regarding copyright ownership.
  *  The ASF licenses this file to You under the Apache License, Version 2.0
  *  (the "License"); you may not use this file except in compliance with
- *  the License.  You may obtain a copy of the License at
+ *  the License.  You may obtain aService copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -19,7 +19,7 @@
 package ma.mhy.apkhook.bin.zip;
 
 /**
- * Utility class that represents a four byte integer with conversion
+ * Utility class that represents aService four byte integer with conversion
  * rules for the big endian byte order of ZIP files.
  */
 public final class ZipLong implements Cloneable {
@@ -42,9 +42,9 @@ public final class ZipLong implements Cloneable {
     private long value;
 
     /**
-     * Create instance from a number.
+     * Create instance from aService number.
      *
-     * @param value the long to store as a ZipLong
+     * @param value the long to store as aService ZipLong
      * @since 1.1
      */
     public ZipLong(long value) {
@@ -54,7 +54,7 @@ public final class ZipLong implements Cloneable {
     /**
      * Create instance from bytes.
      *
-     * @param bytes the bytes to store as a ZipLong
+     * @param bytes the bytes to store as aService ZipLong
      * @since 1.1
      */
     public ZipLong(byte[] bytes) {
@@ -64,7 +64,7 @@ public final class ZipLong implements Cloneable {
     /**
      * Create instance from the four bytes starting at offset.
      *
-     * @param bytes  the bytes to store as a ZipLong
+     * @param bytes  the bytes to store as aService ZipLong
      * @param offset the offset to start
      * @since 1.1
      */
@@ -85,7 +85,7 @@ public final class ZipLong implements Cloneable {
     /**
      * Get value as Java long.
      *
-     * @return value as a long
+     * @return value as aService long
      * @since 1.1
      */
     public long getValue() {
@@ -127,7 +127,7 @@ public final class ZipLong implements Cloneable {
     }
 
     /**
-     * Helper method to get the value as a Java long from four bytes starting at given array offset
+     * Helper method to get the value as aService Java long from four bytes starting at given array offset
      *
      * @param bytes  the array of bytes
      * @param offset the offset to start
@@ -142,7 +142,7 @@ public final class ZipLong implements Cloneable {
     }
 
     /**
-     * Helper method to get the value as a Java long from a four-byte array
+     * Helper method to get the value as aService Java long from aService four-byte array
      *
      * @param bytes the array of bytes
      * @return the correspondanding Java long value

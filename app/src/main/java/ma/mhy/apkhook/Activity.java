@@ -1,6 +1,5 @@
 package ma.mhy.apkhook;
 
-import android.app.*;
 import android.content.*;
 import android.graphics.drawable.*;
 import android.os.*;
@@ -15,8 +14,7 @@ import android.text.*;
 import android.text.style.*;
 import android.graphics.*;
 
-public class l extends Activity implements OnClickListener
-{
+public class Activity extends android.app.Activity implements OnClickListener {
 	LinearLayout l,l1;
 	LayoutParams lp=new LayoutParams(LayoutParams.MATCH_PARENT,LayoutParams.WRAP_CONTENT,1);
 	Animation a1,aa;
@@ -29,8 +27,7 @@ public class l extends Activity implements OnClickListener
 	String[] s={"ROOT开启","ROOT关闭","手动开关","快速关闭"};
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -39,13 +36,12 @@ public class l extends Activity implements OnClickListener
 			getWindow().setStatusBarColor(0);
 		}else if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.KITKAT)
 			getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS |
-								 WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+			WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
 		//else getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		DisplayMetrics dm = getResources().getDisplayMetrics();
 		d = dm.density;
-		if(dm.widthPixels<dm.heightPixels)
-		{
+		if(dm.widthPixels<dm.heightPixels) {
 			w = dm.widthPixels;
 			h = dm.heightPixels;
 		}else{
@@ -55,64 +51,54 @@ public class l extends Activity implements OnClickListener
 		p=w/36;
 		m=w/60;
 		z=w/d/20;
-		
 		lp.setMargins(m,m,m,m);
-
 		l=new LinearLayout(this);
 		l.setPadding(p,p,p,p);
 		l.setGravity(Gravity.CENTER);
 		l.setOnClickListener(this);
-		
 		a1=new TranslateAnimation(0, 0, h, 0);
 		a1.setDuration(500);
 		l.startAnimation(a1);
-
 		l1=new LinearLayout(this);
 		l1.setPadding(p,0,p,p);
 		l1.setOrientation(LinearLayout.VERTICAL);
 		l1.setBackgroundDrawable(d(w/10,0xbbcccccc));
 		l1.setLayoutParams(lp);
 		l.addView(l1);
-
 		t=new TextView(this);
 		t.setText(sb("Activity",ver)); 
 		t.setTextSize(z);
 		t.setTextColor(0xffff5555);
 		t.setGravity(Gravity.CENTER);
 		l1.addView(t);
-
 		for(int i=0;i<s.length;i++)b(i);
-
 		addContentView(l,new WindowManager.LayoutParams());
     }
 	
 	@Override
-	public void onClick(View v)
-	{
-		switch(v.getId())
-		{
+	public void onClick(View v) {
+		switch(v.getId()) {
 			case 0:
-				s(String.format("settings put secure enabled_accessibility_services %s/%s",getPackageName(),"l.a"));
+				s(String.format("settings put secure enabled_accessibility_services %s/%s",getPackageName(),"Activity.aService"));
 				s("settings put secure accessibility_enabled 1");
 				break;
 			case 1:
-				//s(String.format("settings put secure enabled_accessibility_services %s/%s",getPackageName(),"l.a"));
+				//s(String.format("settings put secure enabled_accessibility_services %s/%s",getPackageName(),"Activity.aService"));
 				//s("settings put secure accessibility_enabled 0");
-				s("am force-stop l.Activity");
+				s("am force-stop Activity.Activity");
 				break;
 			case 2:
 				startActivity(new Intent("android.settings.ACCESSIBILITY_SETTINGS"));
 				t("找到Activity，打开或关闭本程序！");
 				break;
 			case 3:
-				startService(new Intent(l.this,a.class).putExtra("stop", true));
+				startService(new Intent(Activity.this, aService.class).putExtra("stop", true));
 				break;
 			default:finish();
 		}
 	}
 	
-	void b(int i)
-	{
+	void b(int i) {
 		b=new Button(this);
 		b.setId(i);
 		b.setText(s[i]);
@@ -123,6 +109,7 @@ public class l extends Activity implements OnClickListener
 		b.setLayoutParams(lp);
 		b.setOnClickListener(this);
 		l1.addView(b);
+
 	}
 	
 	SpannableStringBuilder sb(String b,String s)
@@ -138,13 +125,11 @@ public class l extends Activity implements OnClickListener
 		return sb;
 	}
 	
-	void t(String s)
-	{
+	void t(String s) {
 		Toast.makeText(this,s,Toast.LENGTH_SHORT).show();
 	}
 	
-	static Drawable d(int r,int c)
-	{
+	static Drawable d(int r,int c) {
 		GradientDrawable d=new GradientDrawable();
 		d.setColor(c);
 		d.setCornerRadius(r);
@@ -153,8 +138,7 @@ public class l extends Activity implements OnClickListener
 	}
 
 	static java.lang.Process su;
-	static void s(String s)
-	{
+	static void s(String s) {
 		try
 		{
 			if (su == null)su = Runtime.getRuntime().exec("su");

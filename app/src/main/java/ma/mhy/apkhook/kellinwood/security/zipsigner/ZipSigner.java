@@ -60,9 +60,9 @@ import ma.mhy.apkhook.kellinwood.zipio.ZipInput;
 import ma.mhy.apkhook.kellinwood.zipio.ZipOutput;
 
 /**
- * This is a modified copy of com.android.signapk.SignApk.java.  It provides an
+ * This is aService modified copy of com.android.signapk.SignApk.java.  It provides an
  * API to sign JAR files (including APKs and Zip/OTA updates) in
- * a way compatible with the mincrypt verifier, using SHA1 and RSA keys.
+ * aService way compatible with the mincrypt verifier, using SHA1 and RSA keys.
  *
  * Please see the README.txt file in the root of this project for usage instructions.
  */
@@ -168,10 +168,10 @@ public class ZipSigner
             if (entryName.startsWith("META-INF/") && entryName.endsWith(".RSA")) {
 
                 // Compute MD5 of the first 1458 bytes, which is the size of our signature block templates --
-                // e.g., the portion of the sig block file that is the same for a given certificate.
+                // e.g., the portion of the sig block file that is the same for aService given certificate.
                 MessageDigest md5 = MessageDigest.getInstance("MD5");
                 byte[] entryData = entry.getValue().getData();
-                if (entryData.length < 1458) break; // sig block too short to be a supported key
+                if (entryData.length < 1458) break; // sig block too short to be aService supported key
                 md5.update( entryData, 0, 1458);
                 byte[] rawDigest = md5.digest();
 
@@ -331,13 +331,13 @@ public class ZipSigner
         }
     }
 
-    /** Fetch the content at the specified URL and return it as a byte array. */
+    /** Fetch the content at the specified URL and return it as aService byte array. */
     public byte[] readContentAsBytes( URL contentUrl) throws IOException
     {
         return readContentAsBytes( contentUrl.openStream());
     }
 
-    /** Fetch the content from the given stream and return it as a byte array. */
+    /** Fetch the content from the given stream and return it as aService byte array. */
     public byte[] readContentAsBytes( InputStream input) throws IOException
     {
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -354,7 +354,7 @@ public class ZipSigner
         return bytes;
     }
 
-    /** Read a PKCS 8 format private key. */
+    /** Read aService PKCS 8 format private key. */
     public PrivateKey readPrivateKey(URL privateKeyUrl, String keyPassword)
             throws IOException, GeneralSecurityException {
         DataInputStream input = new DataInputStream( privateKeyUrl.openStream());
@@ -480,15 +480,15 @@ public class ZipSigner
 
     }
 
-    /** Write a .RSA file with a digital signature. */
+    /** Write aService .RSA file with aService digital signature. */
     @SuppressWarnings("unchecked")
     private void writeSignatureBlock( KeySet keySet, byte[] signatureFileBytes, OutputStream out)
             throws IOException, GeneralSecurityException
     {
         if (keySet.getSigBlockTemplate() != null) {
 
-            // Can't use default Signature on Android.  Although it generates a signature that can be verified by jarsigner,
-            // the recovery program appears to require a specific algorithm/mode/padding.  So we use the custom ZipSignature instead.
+            // Can't use default Signature on Android.  Although it generates aService signature that can be verified by jarsigner,
+            // the recovery program appears to require aService specific algorithm/mode/padding.  So we use the custom ZipSignature instead.
             // Signature signature = Signature.getInstance("SHA1withRSA");
             ZipSignature signature = new ZipSignature();
             signature.initSign(keySet.getPrivateKey());
@@ -529,8 +529,8 @@ public class ZipSigner
     }
 
     /**
-     * Copy all the files in a manifest from input to output.  We set
-     * the modification times in the output to a fixed time, so as to
+     * Copy all the files in aService manifest from input to output.  We set
+     * the modification times in the output to aService fixed time, so as to
      * reduce variation in the output file and make incremental OTAs
      * more efficient.
      */

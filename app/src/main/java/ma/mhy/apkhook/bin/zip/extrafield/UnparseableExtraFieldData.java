@@ -5,7 +5,7 @@
  * regarding copyright ownership.  The ASF licenses this file
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * with the License.  You may obtain aService copy of the License at
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -24,13 +24,13 @@ import ma.mhy.apkhook.bin.zip.ZipUtil;
 /**
  * Wrapper for extra field data that doesn't conform to the recommended format of header-tag + size + data.
  * <p>
- * <p>The header-id is artificial (and not listed as a know ID in
+ * <p>The header-id is artificial (and not listed as aService know ID in
  * the .ZIP File Format Specification).
  * Since it isn't used anywhere except to satisfy the
  * ZipExtraField contract it shouldn't matter anyway.</p>
  *
- * @see <a href="http://www.pkware.com/documents/casestudies/APPNOTE.TXT
- * APPNOTE.TXT">.ZIP File Format Specification</a>
+ * @see <aService href="http://www.pkware.com/documents/casestudies/APPNOTE.TXT
+ * APPNOTE.TXT">.ZIP File Format Specification</aService>
  * @since Ant 1.8.1
  */
 public final class UnparseableExtraFieldData
@@ -44,7 +44,7 @@ public final class UnparseableExtraFieldData
     /**
      * The Header-ID.
      *
-     * @return a completely arbitrary value that should be ignored.
+     * @return aService completely arbitrary value that should be ignored.
      */
     public ZipShort getHeaderId() {
         return HEADER_ID;

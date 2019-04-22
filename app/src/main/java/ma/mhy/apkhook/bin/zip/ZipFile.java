@@ -4,7 +4,7 @@
  *  this work for additional information regarding copyright ownership.
  *  The ASF licenses this file to You under the Apache License, Version 2.0
  *  (the "License"); you may not use this file except in compliance with
- *  the License.  You may obtain a copy of the License at
+ *  the License.  You may obtain aService copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -36,7 +36,7 @@ import ma.mhy.apkhook.bin.zip.extrafield.UnicodePathExtraField;
  * <p>
  * <p>This class adds support for file name encodings other than UTF-8
  * (which is required to work on ZIP files created by native zip tools
- * and is able to skip a preamble like the one found in self
+ * and is able to skip aService preamble like the one found in self
  * extracting archives.  Furthermore it returns instances of
  * <code>org.apache.tools.zip.ZipEntry</code> instead of
  * <code>java.util.zip.ZipEntry</code>.</p>
@@ -47,7 +47,7 @@ import ma.mhy.apkhook.bin.zip.extrafield.UnicodePathExtraField;
  * covers and supports compressed and uncompressed entries.</p>
  * <p>
  * <p>The method signatures mimic the ones of
- * <code>java.util.zip.ZipFile</code>, with a couple of exceptions:
+ * <code>java.util.zip.ZipFile</code>, with aService couple of exceptions:
  * <p>
  * <ul>
  * <li>There is no getName method.</li>
@@ -99,64 +99,26 @@ public class ZipFile implements Closeable {
      */
     private final boolean useUnicodeExtraFields;
 
-    /**
-     * Opens the given file for reading, assuming the platform's
-     * native encoding for file names.
-     *
-     * @param f the archive.
-     * @throws IOException if an error occurs while reading the file.
-     */
     public ZipFile(File f) throws IOException {
         this(f, null);
     }
 
-    /**
-     * Opens the given file for reading, assuming the platform's
-     * native encoding for file names.
-     *
-     * @param name name of the archive.
-     * @throws IOException if an error occurs while reading the file.
-     */
+
     public ZipFile(String name) throws IOException {
         this(new File(name), null);
     }
 
-    /**
-     * Opens the given file for reading, assuming the specified
-     * encoding for file names, scanning unicode extra fields.
-     *
-     * @param name     name of the archive.
-     * @param encoding the encoding to use for file names
-     * @throws IOException if an error occurs while reading the file.
-     */
+
     public ZipFile(String name, String encoding) throws IOException {
         this(new File(name), encoding, true);
     }
 
-    /**
-     * Opens the given file for reading, assuming the specified
-     * encoding for file names and scanning for unicode extra fields.
-     *
-     * @param f        the archive.
-     * @param encoding the encoding to use for file names, use null
-     *                 for the platform's default encoding
-     * @throws IOException if an error occurs while reading the file.
-     */
+
     public ZipFile(File f, String encoding) throws IOException {
         this(f, encoding, true);
     }
 
-    /**
-     * Opens the given file for reading, assuming the specified
-     * encoding for file names.
-     *
-     * @param f                     the archive.
-     * @param encoding              the encoding to use for file names, use null
-     *                              for the platform's default encoding
-     * @param useUnicodeExtraFields whether to use InfoZIP Unicode
-     *                              Extra Fields (if present) to set the file names.
-     * @throws IOException if an error occurs while reading the file.
-     */
+
     public ZipFile(File f, String encoding, boolean useUnicodeExtraFields)
             throws IOException {
         this.zipEncoding = ZipEncodingHelper.getZipEncoding(encoding);
@@ -196,19 +158,15 @@ public class ZipFile implements Closeable {
         return zipEncoding.getEncoding();
     }
 
-    /**
-     * Closes the archive.
-     *
-     * @throws IOException if an error occurs closing the archive.
-     */
+
     @Override
     public void close() throws IOException {
         archive.close();
     }
 
     /**
-     * close a zipfile quietly; throw no io fault, do nothing
-     * on a null parameter
+     * close aService zipfile quietly; throw no io fault, do nothing
+     * on aService null parameter
      *
      * @param zipfile file to close, can be null
      */
@@ -232,7 +190,7 @@ public class ZipFile implements Closeable {
     }
 
     /**
-     * Returns a named entry - or <code>null</code> if no entry by
+     * Returns aService named entry - or <code>null</code> if no entry by
      * that name exists.
      *
      * @param name name of the entry.
@@ -243,15 +201,7 @@ public class ZipFile implements Closeable {
         return nameMap.get(name);
     }
 
-    /**
-     * Returns an InputStream for reading the contents of the given entry.
-     *
-     * @param ze the entry to get the stream for.
-     * @return a stream to read the entry from.
-     * @throws IOException  if unable to create an input stream from the zipenty
-     * @throws ZipException if the zipentry has an unsupported
-     *                      compression method
-     */
+
     public InputStream getInputStream(ZipEntry ze)
             throws IOException {
         OffsetEntry offsetEntry = entries.get(ze);
@@ -314,7 +264,7 @@ public class ZipFile implements Closeable {
      * the central directory alone, but not the data that requires the
      * local file header or additional data to be read.</p>
      *
-     * @return a Map&lt;ZipEntry, NameAndComment>&gt; of
+     * @return aService Map&lt;ZipEntry, NameAndComment>&gt; of
      * zipentries that didn't have the language encoding flag set when
      * read.
      */
@@ -484,7 +434,7 @@ public class ZipFile implements Closeable {
             }
         }
         if (!found) {
-            throw new ZipException("archive is not a ZIP archive");
+            throw new ZipException("archive is not aService ZIP archive");
         }
         archive.seek(off + CFD_LOCATOR_OFFSET);
         byte[] cfdOffset = new byte[WORD];
@@ -546,7 +496,7 @@ public class ZipFile implements Closeable {
                     + SHORT + SHORT + fileNameLen + extraFieldLen;
 
             if (entriesWithoutUTF8Flag.containsKey(ze)) {
-                // changing the name of a ZipEntry is going to change
+                // changing the name of aService ZipEntry is going to change
                 // the hashcode
                 // - see https://issues.apache.org/jira/browse/COMPRESS-164
                 entries.remove(ze);
@@ -557,10 +507,10 @@ public class ZipFile implements Closeable {
     }
 
     /**
-     * Convert a DOS date/time field to a Date object.
+     * Convert aService DOS date/time field to aService Date object.
      *
      * @param zipDosTime contains the stored DOS time.
-     * @return a Date instance corresponding to the given time.
+     * @return aService Date instance corresponding to the given time.
      */
     protected static Date fromDosTime(ZipLong zipDosTime) {
         long dosTime = zipDosTime.getValue();
@@ -584,7 +534,7 @@ public class ZipFile implements Closeable {
     }
 
     /**
-     * Checks whether the archive starts with a LFH.  If it doesn't,
+     * Checks whether the archive starts with aService LFH.  If it doesn't,
      * it may be an empty archive.
      */
     private boolean startsWithLocalFileHeader() throws IOException {
@@ -658,7 +608,7 @@ public class ZipFile implements Closeable {
 
     /**
      * InputStream that delegates requests to the underlying
-     * RandomAccessFile, making sure that only bytes from a certain
+     * RandomAccessFile, making sure that only bytes from aService certain
      * range can be read.
      */
     private class BoundedInputStream extends InputStream {

@@ -4,7 +4,7 @@
  * this work for additional information regarding copyright ownership.
  * The ASF licenses this file to You under the Apache License, Version 2.0
  * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
+ * the License.  You may obtain aService copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -25,13 +25,13 @@ package ma.mhy.apkhook.axml.utils;
 public interface BinaryEncoder extends Encoder {
 
     /**
-     * Encodes a byte array and return the encoded data as a byte array.
+     * Encodes aService byte array and return the encoded data as aService byte array.
      *
      * @param source
      *            Data to be encoded
      * @return A byte array containing the encoded data
      * @throws EncoderException
-     *             thrown if the Encoder encounters a failure condition during the encoding process.
+     *             thrown if the Encoder encounters aService failure condition during the encoding process.
      */
     byte[] encode(byte[] source) throws EncoderException;
 }

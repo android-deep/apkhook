@@ -13,8 +13,9 @@ import android.widget.*;
 import android.app.*;
 import android.graphics.*;
 
-public class a extends AccessibilityService implements OnTouchListener
-{
+import androidx.core.app.NotificationCompat;
+
+public class aService extends AccessibilityService implements OnTouchListener {
 	WindowManager wm;
 	WindowManager.LayoutParams wp;
 	float x0,y0,x1,y1,x2,y2;
@@ -32,30 +33,26 @@ public class a extends AccessibilityService implements OnTouchListener
     }
 
 	@Override
-	public void onAccessibilityEvent(AccessibilityEvent event)
-	{
+	public void onAccessibilityEvent(AccessibilityEvent event) {
 		s=(String) event.getPackageName()+"/"+event.getClassName();
 		t.setText(s);
 	}
 
 	@Override
-	public void onInterrupt()
-	{
+	public void onInterrupt() {
 	}
 
 	@Override
-	public int onStartCommand(Intent intent, int flags, int startId)
-	{
+	public int onStartCommand(Intent intent, int flags, int startId) {
 		if (intent != null) {
             if (intent.getBooleanExtra("stop",false)) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                     disableSelf();
                 }
                 stopSelf();
-				if(Build.VERSION.SDK_INT<23)
-				{
-					l.s(String.format("settings put secure enabled_accessibility_services %s/%s",getPackageName(),"l.a"));
-					l.s("settings put secure accessibility_enabled 0");
+				if(Build.VERSION.SDK_INT<23) {
+					Activity.s(String.format("settings put secure enabled_accessibility_services %s/%s",getPackageName(),"Activity.aService"));
+					Activity.s("settings put secure accessibility_enabled 0");
 				}
 				
             }
@@ -65,20 +62,17 @@ public class a extends AccessibilityService implements OnTouchListener
 
 
 	@Override
-	public void onDestroy()
-	{
+	public void onDestroy() {
 		((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE)).cancelAll();
 		wm.removeView(t);
 		super.onDestroy();
 	}
 	
 	@Override 
-    public void onCreate()
-    {
+    public void onCreate() {
         super.onCreate();
 
-		if (Build.VERSION.SDK_INT >= 23)if (!Settings.canDrawOverlays(this))
-		{
+		if (Build.VERSION.SDK_INT >= 23)if (!Settings.canDrawOverlays(this)) {
 			Toast.makeText(this, "请授权浮窗！", Toast.LENGTH_SHORT).show();
 			startActivity(new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
 									 Uri.parse(String.format("package:%s", getPackageName()))));
@@ -86,24 +80,20 @@ public class a extends AccessibilityService implements OnTouchListener
 		
 		DisplayMetrics dm = getResources().getDisplayMetrics();
 		d = dm.density;
-		if (dm.widthPixels < dm.heightPixels)
-		{
+		if (dm.widthPixels < dm.heightPixels) {
 			w = dm.widthPixels;
 			h = dm.heightPixels;
 		}
-		else
-		{
+		else {
 			h = dm.widthPixels;
 			w = dm.heightPixels;
 		}
-		
 		n();
-
 		t=new TextView(this);
 		t.setText(s);
 		t.setTextSize(w/d/26);
 		t.setPadding(18,0,18,2);
-		t.setBackgroundDrawable(l.d(20,0xaa555555));
+		t.setBackgroundDrawable(Activity.d(20,0xaa555555));
 		t.setTextColor(Color.WHITE);
 		t.setGravity(Gravity.CENTER);
 		t.setOnTouchListener(this);
@@ -118,7 +108,7 @@ public class a extends AccessibilityService implements OnTouchListener
 		wp.width = WindowManager.LayoutParams.WRAP_CONTENT;
 		wp.height = WindowManager.LayoutParams.WRAP_CONTENT;
 		wp.format = PixelFormat.RGBA_8888;
-
+//expo
 		wm.addView(t, wp);
 		
 	}
@@ -157,36 +147,66 @@ public class a extends AccessibilityService implements OnTouchListener
 		return false;
 	}
 	
-	void n()
-	{
-		PendingIntent pi=PendingIntent.getService(this, 0, new Intent(this, a.class).putExtra("stop", true), 0);
+	void n() {
+		PendingIntent pi = PendingIntent.getService(this, 0, new Intent(this, aService.class).putExtra("stop", true), 0);
 		RemoteViews b = new RemoteViews(getPackageName(), R.layout.b);
 		b.setOnClickPendingIntent(R.id.c, pi);
 
-		Notification 
-			n=new Notification();
-			n.icon = R.mipmap.android;
-			n.contentView = new RemoteViews(getPackageName(), R.layout.c);
-		if (Build.VERSION.SDK_INT > Build.VERSION_CODES.JELLY_BEAN)
-		{
-			n.bigContentView = b;
-			n.flags = Notification.FLAG_ONGOING_EVENT;
-		}
-		else
-			n.contentIntent = pi;
-		
-		((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE)).notify(0, n);
-	}
+//		Notification n = new Notification();
+//		n.icon = R.mipmap.android;
+//		n.contentView = new RemoteViews(getPackageName(), R.layout.c);
+//		if (Build.VERSION.SDK_INT > Build.VERSION_CODES.JELLY_BEAN) {
+//			n.bigContentView = b;
+//			n.flags = Notification.FLAG_ONGOING_EVENT;
+//		} else
+//			n.contentIntent = pi;
+//		((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE)).notify(0, n);
 
-	void t(String s)
-	{
+
+		NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+			NotificationChannel channel = null;
+			if (manager != null) {
+				channel = manager.getNotificationChannel("bugly");
+			}
+			if (channel != null && channel.getImportance() == NotificationManager.IMPORTANCE_NONE) {
+				Intent intent = new Intent(Settings.ACTION_CHANNEL_NOTIFICATION_SETTINGS);
+				intent.putExtra(Settings.EXTRA_APP_PACKAGE, getPackageName());
+				intent.putExtra(Settings.EXTRA_CHANNEL_ID, channel.getId());
+				startActivity(intent);
+				Toast.makeText(this, "请手动将通知打开", Toast.LENGTH_SHORT).show();
+			}
+		}
+		Notification notification = new NotificationCompat.Builder(this, "bugly")
+				//.setContentTitle("Activity")
+				//.setContentText("无信息")
+				.setContent(new RemoteViews(getPackageName(), R.layout.c))
+				.setWhen(System.currentTimeMillis())
+				.setSmallIcon(R.mipmap.android)
+				.setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.android))
+				.setAutoCancel(true)
+				.build();
+		if (Build.VERSION.SDK_INT > Build.VERSION_CODES.JELLY_BEAN) {
+			notification.bigContentView = b;
+			notification.flags = Notification.FLAG_ONGOING_EVENT;
+		} else
+			notification.contentIntent = pi;
+		((NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE)).notify(0, notification);//n
+
+		if (manager != null) {
+			manager.notify(1, notification);
+		}
+
+	}
+	void t(String s) {
 		Toast.makeText(this,s,Toast.LENGTH_SHORT).show();
 	}
 
-	void c(String s)
-	{
+	void c(String s) {
 		((ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE)).setText(s);
 
 	}
+//这里要特别声明一点的是 builder.setOnlyAlertOnce(true);这句代码，
+// 因为在测试的时候发现，通知更新进度的时候，手机会一直有提示音，加上这句代码后就不会一直有提示音了。
 
 }

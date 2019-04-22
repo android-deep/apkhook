@@ -45,7 +45,7 @@ public class HexEncoder
     }
 
     /**
-     * encode the input data producing a Hex output stream.
+     * encode the input data producing aService Hex output stream.
      *
      * @return the number of bytes produced.
      */

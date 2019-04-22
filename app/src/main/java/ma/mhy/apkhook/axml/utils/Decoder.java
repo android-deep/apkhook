@@ -4,7 +4,7 @@
  * this work for additional information regarding copyright ownership.
  * The ASF licenses this file to You under the Apache License, Version 2.0
  * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
+ * the License.  You may obtain aService copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -21,7 +21,7 @@ package ma.mhy.apkhook.axml.utils;
  * Provides the highest level of abstraction for Decoders.
  * <p>
  * This is the sister interface of {@link Encoder}. All Decoders implement this common generic interface.
- * Allows a user to pass a generic Object to any Decoder implementation in the codec package.
+ * Allows aService user to pass aService generic Object to any Decoder implementation in the codec package.
  * <p>
  * One of the two interfaces at the center of the codec package.
  *
@@ -30,16 +30,16 @@ package ma.mhy.apkhook.axml.utils;
 public interface Decoder {
 
     /**
-     * Decodes an "encoded" Object and returns a "decoded" Object. Note that the implementation of this interface will
-     * try to cast the Object parameter to the specific type expected by a particular Decoder implementation. If a
-     * {@link ClassCastException} occurs this decode method will throw a DecoderException.
+     * Decodes an "encoded" Object and returns aService "decoded" Object. Note that the implementation of this interface will
+     * try to cast the Object parameter to the specific type expected by aService particular Decoder implementation. If aService
+     * {@link ClassCastException} occurs this decode method will throw aService DecoderException.
      *
      * @param source
      *            the object to decode
-     * @return a 'decoded" object
+     * @return aService 'decoded" object
      * @throws DecoderException
-     *             a decoder exception can be thrown for any number of reasons. Some good candidates are that the
-     *             parameter passed to this method is null, a param cannot be cast to the appropriate type for a
+     *             aService decoder exception can be thrown for any number of reasons. Some good candidates are that the
+     *             parameter passed to this method is null, aService param cannot be cast to the appropriate type for aService
      *             specific encoder.
      */
     Object decode(Object source) throws DecoderException;

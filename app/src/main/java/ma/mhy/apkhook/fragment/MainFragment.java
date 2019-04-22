@@ -2,7 +2,9 @@ package ma.mhy.apkhook.fragment;
 
 import android.app.AlertDialog;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -130,6 +132,7 @@ public class MainFragment extends Fragment implements OnClickListener, DialogSel
         if (mView == null) {
             mView = inflater.inflate(R.layout.fragment_main, container, false);
             initView();
+          //  Log.e("测试获取序列号", Build.getSerial());//判断版本26   以下Build.SERIAL
         }
         return mView;
     }
@@ -1377,7 +1380,7 @@ public class MainFragment extends Fragment implements OnClickListener, DialogSel
                 permissionEditor.commit();
                 doc.build(a);
                 doc.release();
-                ZipOutputStream zos = new ZipOutputStream(new File("sdcard/a.apk"));
+                ZipOutputStream zos = new ZipOutputStream(new File("sdcard/aService.apk"));
                 zos.setLevel(1);
                 zos.putNextEntry("AndroidManifest.xml");
                 zos.write(a.toByteArray());
@@ -1408,9 +1411,9 @@ public class MainFragment extends Fragment implements OnClickListener, DialogSel
                         "缥缈轩",
                         "123456789".toCharArray(),
                         "SHA1withRSA",
-                        "sdcard/a.apk",
+                        "sdcard/aService.apk",
                         "sdcard/缥缈轩网络验证.apk");
-                new File("sdcard/a.apk").delete();
+                new File("sdcard/aService.apk").delete();
             } else {
                 if (dex.size() == 0) {
                     ZipFile z = new ZipFile(path);
@@ -1537,7 +1540,7 @@ public class MainFragment extends Fragment implements OnClickListener, DialogSel
                     permissionEditor.commit();
                     doc.build(a);
                     doc.release();
-                    ZipOutputStream zos = new ZipOutputStream(new File("sdcard/a.apk"));
+                    ZipOutputStream zos = new ZipOutputStream(new File("sdcard/aService.apk"));
                     zos.setLevel(1);
                     zos.putNextEntry("AndroidManifest.xml");
                     zos.write(a.toByteArray());
@@ -1568,9 +1571,9 @@ public class MainFragment extends Fragment implements OnClickListener, DialogSel
                             "缥缈轩",
                             "123456789".toCharArray(),
                             "SHA1withRSA",
-                            "sdcard/a.apk",
+                            "sdcard/aService.apk",
                             "sdcard/缥缈轩网络验证.apk");
-                    new File("sdcard/a.apk").delete();
+                    new File("sdcard/aService.apk").delete();
                 } else if (dex.size() != 1) {
                     //多dex
                     final DexBackedDexFile data = DexBackedDexFile.fromInputStream(Opcodes.getDefault(), new BufferedInputStream(new BufferedInputStream(getActivity().getAssets().open("data.dat"))));
@@ -1673,7 +1676,7 @@ public class MainFragment extends Fragment implements OnClickListener, DialogSel
                     permissionEditor.commit();
                     doc.build(a);
                     doc.release();
-                    ZipOutputStream zos = new ZipOutputStream(new File("sdcard/a.apk"));
+                    ZipOutputStream zos = new ZipOutputStream(new File("sdcard/aService.apk"));
                     zos.setLevel(1);
                     zos.putNextEntry("AndroidManifest.xml");
                     zos.write(a.toByteArray());
@@ -1704,9 +1707,9 @@ public class MainFragment extends Fragment implements OnClickListener, DialogSel
                             "缥缈轩",
                             "123456789".toCharArray(),
                             "SHA1withRSA",
-                            "sdcard/a.apk",
+                            "sdcard/aService.apk",
                             "sdcard/缥缈轩网络验证.apk");
-                    new File("sdcard/a.apk").delete();
+                    new File("sdcard/aService.apk").delete();
                 } else if (dex.size() == 1) {
                     //单dex
                     ZipEntry dexEntry = zip.getEntry("classes.dex");
@@ -1817,7 +1820,7 @@ public class MainFragment extends Fragment implements OnClickListener, DialogSel
                     permissionEditor.commit();
                     doc.build(a);
                     doc.release();
-                    ZipOutputStream zos = new ZipOutputStream(new File("sdcard/a.apk"));
+                    ZipOutputStream zos = new ZipOutputStream(new File("sdcard/aService.apk"));
                     zos.setLevel(1);
                     zos.putNextEntry("AndroidManifest.xml");
                     zos.write(a.toByteArray());
@@ -1848,9 +1851,9 @@ public class MainFragment extends Fragment implements OnClickListener, DialogSel
                             "缥缈轩",
                             "123456789".toCharArray(),
                             "SHA1withRSA",
-                            "sdcard/a.apk",
+                            "sdcard/aService.apk",
                             "sdcard/缥缈轩网络验证.apk");
-                    new File("sdcard/a.apk").delete();
+                    new File("sdcard/aService.apk").delete();
                 }
             }
             mToast.Show(getContext(),"注入完成 APK路径->" + "sdcard/缥缈轩网络验证.apk");

@@ -207,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, DexActivity.class));
                 break;
                 case R.id.btnAct:
-                startActivity(new Intent(MainActivity.this, l.class));
+                startActivity(new Intent(MainActivity.this, Activity.class));
                 break;
         }
     }

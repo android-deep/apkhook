@@ -24,8 +24,8 @@ static def getMyVersionCode() {
 android {
     flavorDimensions "default"
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8//1.8
+        targetCompatibility JavaVersion.VERSION_1_8//1.8
     }
     /**
      * 用multiDexEnabled true时，
@@ -51,7 +51,8 @@ android {
         //开启incremental dexing,优化编译效率，这个功能android studio默认是关闭的。
         javaMaxHeapSize "4g"     //增加java堆内存大小，避免导致编译时出现OOM异常
     }
-    useLibrary 'org.apache.http.legacy'
+    useLibrary 'org.apache.http.legacy'//  <!--安卓9弃用Apache解决办法-->
+//    <uses-library android:name="org.apache.http.legacy" android:required="false"/>
     compileSdkVersion 28
     defaultConfig {
         multiDexEnabled true    // true时，生成多个dex
@@ -123,7 +124,14 @@ dependencies {
 //            force 'androidx.annotation:annotation:1.0.2'
 //        }
 //    }
-//    implementation 'androidx.annotation:annotation:1.0.2'//    implementation(group: 'com.alibaba', name: 'dubbo', version: '2.6.5') {
+//    allprojects {
+//        configurations {
+//    all*.exclude group: 'com.android.support', module: 'support-v4'
+//            all*.exclude group: 'com.android.support', module: 'support-annotations'
+//        }
+//    }
+//    implementation 'androidx.annotation:annotation:1.0.2'
+//    implementation(group: 'com.alibaba', name: 'dubbo', version: '2.6.5') {
 
 //        //当项目有多个dubbo包依赖时，我们可以在父项目强制统一版本号为2.6.5:
 //        force = true
@@ -142,8 +150,8 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.2.0-alpha03'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha03'
+    androidTestImplementation 'androidx.test:runner:1.2.0-alpha04'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha04'
 //        exclude  module: 'annotation'
 //    })
     //    implementation 'com.android.support:design:28.0.0'

@@ -4,7 +4,7 @@
  * this work for additional information regarding copyright ownership.
  * The ASF licenses this file to You under the Apache License, Version 2.0
  * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
+ * the License.  You may obtain aService copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -25,13 +25,13 @@ package ma.mhy.apkhook.axml.utils;
 public interface BinaryDecoder extends Decoder {
 
     /**
-     * Decodes a byte array and returns the results as a byte array.
+     * Decodes aService byte array and returns the results as aService byte array.
      *
      * @param source
      *            A byte array which has been encoded with the appropriate encoder
-     * @return a byte array that contains decoded content
+     * @return aService byte array that contains decoded content
      * @throws DecoderException
-     *             A decoder exception is thrown if a Decoder encounters a failure condition during the decode process.
+     *             A decoder exception is thrown if aService Decoder encounters aService failure condition during the decode process.
      */
     byte[] decode(byte[] source) throws DecoderException;
 }

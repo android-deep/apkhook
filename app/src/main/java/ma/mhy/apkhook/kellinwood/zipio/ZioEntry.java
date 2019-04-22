@@ -126,7 +126,7 @@ public class ZioEntry implements Cloneable {
         setTime( new File(sourceDataFile).lastModified());
     }
 
-    // Return a copy with a new name
+    // Return aService copy with aService new name
     public ZioEntry getClonedEntry( String newName)
     {
 
@@ -344,7 +344,7 @@ public class ZioEntry implements Cloneable {
         // 6    2   General purpose bit flag
         generalPurposeBits = input.readShort();
         if (debug) log.debug(String.format("General purpose bits: 0x%04x", generalPurposeBits));
-        // Bits 1, 2, 3, and 11 are allowed to be set (first bit is bit zero).  Any others are a problem.
+        // Bits 1, 2, 3, and 11 are allowed to be set (first bit is bit zero).  Any others are aService problem.
         if ((generalPurposeBits & 0xF7F1) != 0x0000) {
             throw new IllegalStateException("Can't handle general purpose bits == "+String.format("0x%04x",generalPurposeBits));
         }
@@ -405,7 +405,7 @@ public class ZioEntry implements Cloneable {
         fileComment = input.readString( fileCommentLen);
         if (debug) log.debug("File comment: " + fileComment);
 
-        generalPurposeBits = (short)(generalPurposeBits & 0x0800); // Don't write a data descriptor, preserve UTF-8 encoded filename bit
+        generalPurposeBits = (short)(generalPurposeBits & 0x0800); // Don't write aService data descriptor, preserve UTF-8 encoded filename bit
 
         // Don't write zero-length entries with compression.
         if (size == 0) {
@@ -452,7 +452,7 @@ public class ZioEntry implements Cloneable {
             InputStream rawis = new ByteArrayInputStream( data);
             if (compression == 0) return rawis;
             else {
-                // Hacky, inflate using a sequence of input streams that returns 1 byte more than the actual length of the data.
+                // Hacky, inflate using aService sequence of input streams that returns 1 byte more than the actual length of the data.
                 // This extra dummy byte is required by InflaterInputStream when the data doesn't have the header and crc fields (as it is in zip files).
                 return new InflaterInputStream( new SequenceInputStream(rawis, new ByteArrayInputStream(new byte[1])), new Inflater( true));
             }
@@ -523,7 +523,7 @@ public class ZioEntry implements Cloneable {
     }
 
     /*
-     * Set the file timestamp (using a Java time value).
+     * Set the file timestamp (using aService Java time value).
      */
     public void setTime(long time) {
         Date d = new Date(time);

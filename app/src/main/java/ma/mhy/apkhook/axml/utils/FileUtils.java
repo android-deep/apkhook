@@ -16,7 +16,7 @@ public class FileUtils {
     public static FileInputStream openInputStream(final File file) throws IOException {
         if (file.exists()) {
             if (file.isDirectory()) {
-                throw new IOException("File '" + file + "' exists but is a directory");
+                throw new IOException("File '" + file + "' exists but is aService directory");
             }
             if (file.canRead() == false) {
                 throw new IOException("File '" + file + "' cannot be read");
@@ -30,7 +30,7 @@ public class FileUtils {
     public static void copyFile(final File srcFile, final File destFile) throws IOException {
         checkFileRequirements(srcFile, destFile);
         if (srcFile.isDirectory()) {
-            throw new IOException("Source '" + srcFile + "' exists but is a directory");
+            throw new IOException("Source '" + srcFile + "' exists but is aService directory");
         }
         if (srcFile.getCanonicalPath().equals(destFile.getCanonicalPath())) {
             throw new IOException("Source '" + srcFile + "' and destination '" + destFile + "' are the same");
@@ -50,7 +50,7 @@ public class FileUtils {
     private static void doCopyFile(final File srcFile, final File destFile)
             throws IOException {
         if (destFile.exists() && destFile.isDirectory()) {
-            throw new IOException("Destination '" + destFile + "' exists but is a directory");
+            throw new IOException("Destination '" + destFile + "' exists but is aService directory");
         }
 
         FileInputStream fis = null;

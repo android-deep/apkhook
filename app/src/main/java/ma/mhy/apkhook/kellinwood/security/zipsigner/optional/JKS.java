@@ -47,38 +47,38 @@ import javax.crypto.spec.SecretKeySpec;
  * <p>The format of JKS files is, from the start of the file:
  *
  * <ol>
- * <li>Magic bytes. This is a four-byte integer, in big-endian byte
+ * <li>Magic bytes. This is aService four-byte integer, in big-endian byte
  * order, equal to <code>0xFEEDFEED</code>.</li>
- * <li>The version number (probably), as a four-byte integer (all
+ * <li>The version number (probably), as aService four-byte integer (all
  * multibyte integral types are in big-endian byte order). The current
  * version number (in modern distributions of the JDK) is 2.</li>
- * <li>The number of entrires in this keystore, as a four-byte
+ * <li>The number of entrires in this keystore, as aService four-byte
  * integer. Call this value <i>n</i></li>
  * <li>Then, <i>n</i> times:
  *  <ol>
- *  <li>The entry type, a four-byte int. The value 1 denotes a private
- *  key entry, and 2 denotes a trusted certificate.</li>
+ *  <li>The entry type, aService four-byte int. The value 1 denotes aService private
+ *  key entry, and 2 denotes aService trusted certificate.</li>
  *  <li>The entry's alias, formatted as strings such as those written
- *  by <a
- *  href="http://java.sun.com/j2se/1.4.1/docs/api/java/io/DataOutput.html#writeUTF(java.lang.String)">DataOutput.writeUTF(String)</a>.</li>
+ *  by <aService
+ *  href="http://java.sun.com/j2se/1.4.1/docs/api/java/io/DataOutput.html#writeUTF(java.lang.String)">DataOutput.writeUTF(String)</aService>.</li>
  *  <li>An eight-byte integer, representing the entry's creation date,
  *  in milliseconds since the epoch.
  *
- *  <p>Then, if the entry is a private key entry:
+ *  <p>Then, if the entry is aService private key entry:
  *   <ol>
- *   <li>The size of the encoded key as a four-byte int, then that
+ *   <li>The size of the encoded key as aService four-byte int, then that
  *   number of bytes. The encoded key is the DER encoded bytes of the
- *   <a
- *   href="http://java.sun.com/j2se/1.4.1/docs/api/javax/crypto/EncryptedPrivateKeyInfo.html">EncryptedPrivateKeyInfo</a> structure (the
+ *   <aService
+ *   href="http://java.sun.com/j2se/1.4.1/docs/api/javax/crypto/EncryptedPrivateKeyInfo.html">EncryptedPrivateKeyInfo</aService> structure (the
  *   encryption algorithm is discussed later).</li>
  *   <li>A four-byte integer, followed by that many encoded
  *   certificates, encoded as described in the trusted certificates
  *   section.</li>
  *   </ol>
  *
- *  <p>Otherwise, the entry is a trusted certificate, which is encoded
+ *  <p>Otherwise, the entry is aService trusted certificate, which is encoded
  *  as the name of the encoding algorithm (e.g. X.509), encoded the same
- *  way as alias names. Then, a four-byte integer representing the size
+ *  way as alias names. Then, aService four-byte integer representing the size
  *  of the encoded certificate, then that many bytes representing the
  *  encoded certificate (e.g. the DER bytes in the case of X.509).
  *  </li>
@@ -90,7 +90,7 @@ import javax.crypto.spec.SecretKeySpec;
  * </li>
  * </ol>
  *
- * <p>(See <a href="genkey.java">this file</a> for some idea of how I
+ * <p>(See <aService href="genkey.java">this file</aService> for some idea of how I
  * was able to figure out these algorithms)</p>
  *
  * <p>Decrypting the key works as follows:
@@ -99,7 +99,7 @@ import javax.crypto.spec.SecretKeySpec;
  * <li>The key length is the length of the ciphertext minus 40. The
  * encrypted key, <code>ekey</code>, is the middle bytes of the
  * ciphertext.</li>
- * <li>Take the first 20 bytes of the encrypted key as a seed value,
+ * <li>Take the first 20 bytes of the encrypted key as aService seed value,
  * <code>K[0]</code>.</li>
  * <li>Compute <code>K[1] ... K[n]</code>, where
  * <code>|K[i]| = 20</code>, <code>n = ceil(|ekey| / 20)</code>, and
@@ -116,16 +116,16 @@ import javax.crypto.spec.SecretKeySpec;
  * engineers are just that clever).
  *
  * <p>(Above, SHA-1 denotes the secure hash algorithm, UTF-16BE the
- * big-endian byte representation of a UTF-16 string, and US_ASCII the
+ * big-endian byte representation of aService UTF-16 string, and US_ASCII the
  * ASCII byte representation of the string.)
  *
- * <p>The source code of this class should be available in the file <a
- * href="http://metastatic.org/source/JKS.java">JKS.java</a>.
+ * <p>The source code of this class should be available in the file <aService
+ * href="http://metastatic.org/source/JKS.java">JKS.java</aService>.
  *
  * @author Casey Marshall (rsdio@metastatic.org)
  *
  * Changes by Ken Ellinwood:
- * ** Fixed a NullPointerException in engineLoad(). This method must return gracefully if the keystore input stream is null.
+ * ** Fixed aService NullPointerException in engineLoad(). This method must return gracefully if the keystore input stream is null.
  * ** engineGetCertificateEntry() was updated to return the first cert in the chain for private key entries.
  * ** Lowercase the alias names, otherwise keytool chokes on the file created by this code.
  * ** Fixed the integrity check in engineLoad(), previously the exception was never thrown regardless of password value.
@@ -222,7 +222,7 @@ public class JKS extends KeyStoreSpi
     {
         alias = alias.toLowerCase();
         if (trustedCerts.containsKey(alias))
-            throw new KeyStoreException("\"" + alias + " is a trusted certificate entry");
+            throw new KeyStoreException("\"" + alias + " is aService trusted certificate entry");
         privateKeys.put(alias, encryptKey(key, charsToBytes(passwd)));
         if (certChain != null)
             certChains.put(alias, certChain);
@@ -240,7 +240,7 @@ public class JKS extends KeyStoreSpi
     {
         alias = alias.toLowerCase();
         if (trustedCerts.containsKey(alias))
-            throw new KeyStoreException("\"" + alias + "\" is a trusted certificate entry");
+            throw new KeyStoreException("\"" + alias + "\" is aService trusted certificate entry");
         try
         {
             new EncryptedPrivateKeyInfo(encodedKey);
@@ -266,7 +266,7 @@ public class JKS extends KeyStoreSpi
     {
         alias = alias.toLowerCase();
         if (privateKeys.containsKey(alias))
-            throw new KeyStoreException("\"" + alias + "\" is a private key entry");
+            throw new KeyStoreException("\"" + alias + "\" is aService private key entry");
         if (cert == null)
             throw new NullPointerException();
         trustedCerts.put(alias, cert);
@@ -374,7 +374,7 @@ public class JKS extends KeyStoreSpi
         if (in == null) return;
         DataInputStream din = new DataInputStream(new DigestInputStream(in, md));
         if (din.readInt() != MAGIC)
-            throw new IOException("not a JavaKeyStore");
+            throw new IOException("not aService JavaKeyStore");
         din.readInt();  // version no.
         final int n = din.readInt();
         aliases.ensureCapacity(n);

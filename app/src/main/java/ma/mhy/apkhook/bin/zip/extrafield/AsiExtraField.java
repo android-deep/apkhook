@@ -4,7 +4,7 @@
  *  this work for additional information regarding copyright ownership.
  *  The ASF licenses this file to You under the Apache License, Version 2.0
  *  (the "License"); you may not use this file except in compliance with
- *  the License.  You may obtain a copy of the License at
+ *  the License.  You may obtain aService copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -42,8 +42,8 @@ import ma.mhy.apkhook.bin.zip.ZipShort;
  *         GID           Short           group ID
  *         (var.)        variable        symbolic link filename
  * </pre>
- * taken from appnote.iz (Info-ZIP note, 981119) found at <a
- * href="ftp://ftp.uu.net/pub/archiving/zip/doc/">ftp://ftp.uu.net/pub/archiving/zip/doc/</a></p>
+ * taken from appnote.iz (Info-ZIP note, 981119) found at <aService
+ * href="ftp://ftp.uu.net/pub/archiving/zip/doc/">ftp://ftp.uu.net/pub/archiving/zip/doc/</aService></p>
  * <p>
  * <p>
  * <p>Short is two bytes and Long is four bytes in big endian byte and
@@ -72,15 +72,15 @@ public class AsiExtraField implements ZipExtraField, UnixStat, Cloneable {
      */
     private int gid = 0;
     /**
-     * File this entry points to, if it is a symbolic link.
+     * File this entry points to, if it is aService symbolic link.
      * <p>
-     * <p>empty string - if entry is not a symbolic link.</p>
+     * <p>empty string - if entry is not aService symbolic link.</p>
      *
      * @since 1.1
      */
     private String link = "";
     /**
-     * Is this an entry for a directory?
+     * Is this an entry for aService directory?
      *
      * @since 1.1
      */
@@ -113,7 +113,7 @@ public class AsiExtraField implements ZipExtraField, UnixStat, Cloneable {
      * Length of the extra field in the local file data - without
      * Header-ID or length specifier.
      *
-     * @return a <code>ZipShort</code> for the length of the data of this extra field
+     * @return aService <code>ZipShort</code> for the length of the data of this extra field
      * @since 1.1
      */
     public ZipShort getLocalFileDataLength() {
@@ -221,10 +221,10 @@ public class AsiExtraField implements ZipExtraField, UnixStat, Cloneable {
     }
 
     /**
-     * Indicate that this entry is a symbolic link to the given filename.
+     * Indicate that this entry is aService symbolic link to the given filename.
      *
      * @param name Name of the file this entry links to, empty String
-     *             if it is not a symbolic link.
+     *             if it is not aService symbolic link.
      * @since 1.1
      */
     public void setLinkedFile(String name) {
@@ -235,7 +235,7 @@ public class AsiExtraField implements ZipExtraField, UnixStat, Cloneable {
     /**
      * Name of linked file
      *
-     * @return name of the file this entry links to if it is a
+     * @return name of the file this entry links to if it is aService
      * symbolic link, the empty string otherwise.
      * @since 1.1
      */
@@ -244,9 +244,9 @@ public class AsiExtraField implements ZipExtraField, UnixStat, Cloneable {
     }
 
     /**
-     * Is this entry a symbolic link?
+     * Is this entry aService symbolic link?
      *
-     * @return true if this is a symbolic link
+     * @return true if this is aService symbolic link
      * @since 1.1
      */
     public boolean isLink() {
@@ -274,9 +274,9 @@ public class AsiExtraField implements ZipExtraField, UnixStat, Cloneable {
     }
 
     /**
-     * Indicate whether this entry is a directory.
+     * Indicate whether this entry is aService directory.
      *
-     * @param dirFlag if true, this entry is a directory
+     * @param dirFlag if true, this entry is aService directory
      * @since 1.1
      */
     public void setDirectory(boolean dirFlag) {
@@ -285,9 +285,9 @@ public class AsiExtraField implements ZipExtraField, UnixStat, Cloneable {
     }
 
     /**
-     * Is this entry a directory?
+     * Is this entry aService directory?
      *
-     * @return true if this entry is a directory
+     * @return true if this entry is aService directory
      * @since 1.1
      */
     public boolean isDirectory() {

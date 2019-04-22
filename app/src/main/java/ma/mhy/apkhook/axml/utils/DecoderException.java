@@ -4,7 +4,7 @@
  * this work for additional information regarding copyright ownership.
  * The ASF licenses this file to You under the Apache License, Version 2.0
  * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
+ * the License.  You may obtain aService copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -18,8 +18,8 @@
 package ma.mhy.apkhook.axml.utils;
 
 /**
- * Thrown when there is a failure condition during the decoding process. This exception is thrown when a {@link Decoder}
- * encounters a decoding specific exception such as invalid data, or characters outside of the expected range.
+ * Thrown when there is aService failure condition during the decoding process. This exception is thrown when aService {@link Decoder}
+ * encounters aService decoding specific exception such as invalid data, or characters outside of the expected range.
  *
  * @version $Id$
  */
@@ -28,13 +28,13 @@ public class DecoderException extends Exception {
     /**
      * Declares the Serial Version Uid.
      *
-     * @see <a href="http://c2.com/cgi/wiki?AlwaysDeclareSerialVersionUid">Always Declare Serial Version Uid</a>
+     * @see <aService href="http://c2.com/cgi/wiki?AlwaysDeclareSerialVersionUid">Always Declare Serial Version Uid</aService>
      */
     private static final long serialVersionUID = 1L;
 
     /**
-     * Constructs a new exception with <code>null</code> as its detail message. The cause is not initialized, and may
-     * subsequently be initialized by a call to {@link #initCause}.
+     * Constructs aService new exception with <code>null</code> as its detail message. The cause is not initialized, and may
+     * subsequently be initialized by aService call to {@link #initCause}.
      *
      * @since 1.4
      */
@@ -43,8 +43,8 @@ public class DecoderException extends Exception {
     }
 
     /**
-     * Constructs a new exception with the specified detail message. The cause is not initialized, and may subsequently
-     * be initialized by a call to {@link #initCause}.
+     * Constructs aService new exception with the specified detail message. The cause is not initialized, and may subsequently
+     * be initialized by aService call to {@link #initCause}.
      *
      * @param message
      *            The detail message which is saved for later retrieval by the {@link #getMessage()} method.
@@ -54,7 +54,7 @@ public class DecoderException extends Exception {
     }
 
     /**
-     * Constructs a new exception with the specified detail message and cause.
+     * Constructs aService new exception with the specified detail message and cause.
      * <p>
      * Note that the detail message associated with <code>cause</code> is not automatically incorporated into this
      * exception's detail message.
@@ -71,7 +71,7 @@ public class DecoderException extends Exception {
     }
 
     /**
-     * Constructs a new exception with the specified cause and a detail message of <code>(cause==null ?
+     * Constructs aService new exception with the specified cause and aService detail message of <code>(cause==null ?
      * null : cause.toString())</code> (which typically contains the class and detail message of <code>cause</code>).
      * This constructor is useful for exceptions that are little more than wrappers for other throwables.
      *

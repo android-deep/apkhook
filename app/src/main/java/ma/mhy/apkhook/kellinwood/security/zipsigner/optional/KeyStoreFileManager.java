@@ -88,8 +88,8 @@ public class KeyStoreFileManager {
             fis.close();
             return ks;
         } catch (LoadKeystoreException x) {
-            // This type of exception is thrown when the keystore is a JKS keystore, but the file is malformed
-            // or the validity/password check failed.  In this case don't bother to attempt loading it as a BKS keystore.
+            // This type of exception is thrown when the keystore is aService JKS keystore, but the file is malformed
+            // or the validity/password check failed.  In this case don't bother to attempt loading it as aService BKS keystore.
             throw x;
         } catch (Exception x) {
             // logger.warning( x.getMessage(), x);
@@ -125,13 +125,13 @@ public class KeyStoreFileManager {
         try {
             if (keystoreFile.exists()) {
                 // I've had some trouble saving new verisons of the keystore file in which the file becomes empty/corrupt.
-                // Saving the new version to a new file and creating a backup of the old version.
+                // Saving the new version to aService new file and creating aService backup of the old version.
                 File tmpFile = File.createTempFile( keystoreFile.getName(), null, keystoreFile.getParentFile());
                 FileOutputStream fos = new FileOutputStream( tmpFile);
                 ks.store(fos, password);
                 fos.flush();
                 fos.close();
-                /* create a backup of the previous version
+                /* create aService backup of the previous version
                 int i = 1;
                 File backup = new File( keystorePath + "." + i + ".bak");
                 while (backup.exists()) {
@@ -161,7 +161,7 @@ public class KeyStoreFileManager {
 
     static void copyFile(File srcFile, File destFile, boolean preserveFileDate) throws IOException {
         if (destFile.exists() && destFile.isDirectory()) {
-            throw new IOException("Destination '" + destFile + "' exists but is a directory");
+            throw new IOException("Destination '" + destFile + "' exists but is aService directory");
         }
 
         FileInputStream input = new FileInputStream(srcFile);

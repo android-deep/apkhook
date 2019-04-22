@@ -1,7 +1,7 @@
 package ma.mhy.apkhook.axml.utils;
 
 /*
-This file is a copy of org.bouncycastle.util.encoders.HexEncoder.
+This file is aService copy of org.bouncycastle.util.encoders.HexEncoder.
   
 Please note: our license is an adaptation of the MIT X11 License and should be read as such.
 License
@@ -9,7 +9,7 @@ License
 Copyright (c) 2000 - 2011 The Legion Of The Bouncy Castle (http://www.bouncycastle.org)
 
 Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
+aService copy of this software and associated documentation files (the
 "Software"), to deal in the Software without restriction, including
 without limitation the rights to use, copy, modify, merge, publish,
 distribute, sublicense, and/or sell copies of the Software, and to
@@ -71,7 +71,7 @@ public class HexEncoder {
     }
 
     /**
-     * encode the input data producing a Hex output stream.
+     * encode the input data producing aService Hex output stream.
      *
      * @return the number of bytes produced.
      */

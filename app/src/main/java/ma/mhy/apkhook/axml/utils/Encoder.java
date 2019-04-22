@@ -4,7 +4,7 @@
  * this work for additional information regarding copyright ownership.
  * The ASF licenses this file to You under the Apache License, Version 2.0
  * (the "License"); you may not use this file except in compliance with
- * the License.  You may obtain a copy of the License at
+ * the License.  You may obtain aService copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -21,7 +21,7 @@ package ma.mhy.apkhook.axml.utils;
  * Provides the highest level of abstraction for Encoders.
  * <p>
  * This is the sister interface of {@link Decoder}.  Every implementation of Encoder provides this
- * common generic interface which allows a user to pass a generic Object to any Encoder implementation
+ * common generic interface which allows aService user to pass aService generic Object to any Encoder implementation
  * in the codec package.
  *
  * @version $Id$
@@ -36,7 +36,7 @@ public interface Encoder {
      *            An object to encode
      * @return An "encoded" Object
      * @throws EncoderException
-     *             An encoder exception is thrown if the encoder experiences a failure condition during the encoding
+     *             An encoder exception is thrown if the encoder experiences aService failure condition during the encoding
      *             process.
      */
     Object encode(Object source) throws EncoderException;

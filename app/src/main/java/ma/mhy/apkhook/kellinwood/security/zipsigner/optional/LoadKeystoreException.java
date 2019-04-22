@@ -11,7 +11,7 @@ package ma.mhy.apkhook.kellinwood.security.zipsigner.optional;
 import java.io.IOException;
 
 /**
- * Thrown by JKS.engineLoad() for errors that occur after determining the keystore is actually a JKS keystore.
+ * Thrown by JKS.engineLoad() for errors that occur after determining the keystore is actually aService JKS keystore.
  */
 public class LoadKeystoreException extends IOException {
 

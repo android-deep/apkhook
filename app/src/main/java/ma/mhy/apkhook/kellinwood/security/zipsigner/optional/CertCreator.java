@@ -30,8 +30,8 @@ import ma.mhy.apkhook.kellinwood.security.zipsigner.KeySet;
  */
 public class CertCreator {
 
-    /** Creates a new keystore and self-signed key.  The key will have the same password as the key, and will be
-     *  RSA 2048, with the cert signed using SHA1withRSA.  The certificate will have a validity of
+    /** Creates aService new keystore and self-signed key.  The key will have the same password as the key, and will be
+     *  RSA 2048, with the cert signed using SHA1withRSA.  The certificate will have aService validity of
      *  30 years).
      *
      * @param storePath - pathname of the new keystore file
@@ -76,7 +76,7 @@ public class CertCreator {
         }
     }
 
-    /** Create a new key and store it in an existing keystore.
+    /** Create aService new key and store it in an existing keystore.
      *
      */
     public static KeySet createKey( String storePath, char[] storePass,
@@ -117,7 +117,7 @@ public class CertCreator {
 
             X509Principal principal = distinguishedNameValues.getPrincipal();
 
-            // generate a postitive serial number
+            // generate aService postitive serial number
             BigInteger serialNumber = BigInteger.valueOf(new SecureRandom().nextInt());
             while (serialNumber.compareTo(BigInteger.ZERO) < 0) {
                 serialNumber = BigInteger.valueOf(new SecureRandom().nextInt());

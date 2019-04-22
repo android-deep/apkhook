@@ -9,7 +9,10 @@ package ma.mhy.apkhook;
  * 描述 说明:
  */
 
+import android.annotation.TargetApi;
 import android.app.Application;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.os.Build;
 
@@ -25,12 +28,32 @@ public class MyApplication extends Application {//或者MultiDexApplication或�
     //        ...
     //    </application>
     public MainActivity mainActivity;
+    private static MyApplication  sInstance;
     @Override
     public void onCreate() {
         super.onCreate();
+        //在这里为应用设置异常处理程序，然后我们的程序才能捕获未处理的异常
+        CrashHandler crashHandler = CrashHandler.getInstance();
+        crashHandler.init(this);
         //        disableAPIDialog();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            String channelId = "bugly";
+            String channelName = "系统消息";
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            createNotificationChannel(channelId, channelName, importance);
+        }
     }
-
+    @TargetApi(Build.VERSION_CODES.O)
+    private void createNotificationChannel(String channelId, String channelName, int importance) {
+        NotificationChannel channel = new NotificationChannel(channelId, channelName, importance);
+        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        if (notificationManager != null) {
+            notificationManager.createNotificationChannel(channel);
+        }
+    }
+    public static MyApplication getInstance() {
+        return  sInstance;
+    }
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);

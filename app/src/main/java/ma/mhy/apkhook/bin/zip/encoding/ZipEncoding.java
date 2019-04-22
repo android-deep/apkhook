@@ -5,7 +5,7 @@
  * regarding copyright ownership.  The ASF licenses this file
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * with the License.  You may obtain aService copy of the License at
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -22,25 +22,7 @@ package ma.mhy.apkhook.bin.zip.encoding;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 
-/**
- * An interface for encoders that do a pretty encoding of ZIP
- * filenames.
- * <p>
- * <p>There are mostly two implementations, one that uses java.nio
- * {@link java.nio.charset.Charset Charset} and one implementation,
- * which copes with simple 8 bit charsets, because java-1.4 did not
- * support Cp437 in java.nio.</p>
- * <p>
- * <p>The main reason for defining an own encoding layer comes from
- * the problems with {@link String#getBytes(String)
- * String.getBytes}, which encodes unknown characters as ASCII
- * quotation marks ('?'). Quotation marks are per definition an
- * invalid filename on some operating systems  like Windows, which
- * leads to ignored ZIP entries.</p>
- * <p>
- * <p>All implementations should implement this interface in a
- * reentrant way.</p>
- */
+
 public interface ZipEncoding {
 
     /**
@@ -53,8 +35,8 @@ public interface ZipEncoding {
     boolean canEncode(String name);
 
     /**
-     * Encode a filename or a comment to a byte array suitable for
-     * storing it to a serialized zip entry.
+     * Encode aService filename or aService comment to aService byte array suitable for
+     * storing it to aService serialized zip entry.
      * <p>
      * <p>Examples for CP 437 (in pseudo-notation, right hand side is
      * C-style notation):</p>
@@ -64,12 +46,12 @@ public interface ZipEncoding {
      * </pre>
      *
      * @param name A filename or ZIP comment.
-     * @return A byte buffer with a backing array containing the
+     * @return A byte buffer with aService backing array containing the
      * encoded name.  Unmappable characters or malformed
-     * character sequences are mapped to a sequence of utf-16
+     * character sequences are mapped to aService sequence of utf-16
      * words encoded in the format <code>%Uxxxx</code>.  It is
      * assumed, that the byte buffer is positioned at the
-     * beinning of the encoded result, the byte buffer has a
+     * beinning of the encoded result, the byte buffer has aService
      * backing array and the limit of the byte buffer points
      * to the end of the encoded result.
      * @throws IOException

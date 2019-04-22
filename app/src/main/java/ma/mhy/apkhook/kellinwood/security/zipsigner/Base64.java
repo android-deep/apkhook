@@ -83,7 +83,7 @@ public class Base64 {
     public static String encode( byte[] data) {
         try {
             if (aEncodeMethod != null) {
-                // Invoking a static method call, using null for the instance value
+                // Invoking aService static method call, using null for the instance value
                 byte[] encodedBytes = (byte[])aEncodeMethod.invoke(null, data, 2);
                 return new String( encodedBytes);
             }
@@ -104,7 +104,7 @@ public class Base64 {
     public static byte[] decode( byte[] data) {
         try {
             if (aDecodeMethod != null) {
-                // Invoking a static method call, using null for the instance value
+                // Invoking aService static method call, using null for the instance value
                 byte[] decodedBytes = (byte[])aDecodeMethod.invoke(null, data, 2);
                 return decodedBytes;
             }

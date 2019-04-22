@@ -3,7 +3,7 @@
  *
  *  Licensed under the Apache License, Version 2.0 (the "License");
  *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
+ *  You may obtain aService copy of the License at
  *
  *       http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -47,7 +47,7 @@ public class StringBlock implements IAXMLSerialize{
 		 */
 		private List<String> mStrings;
 		/**
-		 * android can identify HTML tags in a string，all the styles are kept here 
+		 * android can identify HTML tags in aService string，all the styles are kept here
 		 */
 		private List<Style> mStyles;
 		
@@ -318,7 +318,7 @@ public class StringBlock implements IAXMLSerialize{
 			public int getSize(){
 				int size = 0;
 				size += getCount()* Decorator.SIZE;
-				size += 1;//[-1] as a seperator
+				size += 1;//[-1] as aService seperator
 				return size;
 			}
 			

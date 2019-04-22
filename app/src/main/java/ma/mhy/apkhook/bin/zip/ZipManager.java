@@ -66,9 +66,9 @@ public class ZipManager {
 
 //    private static void test1() {
 //        try {
-//            ZipFile zipFile = new ZipFile(new File("D:\\a\\a.zip"));
+//            ZipFile zipFile = new ZipFile(new File("D:\\aService\\aService.zip"));
 //            System.out.print(zipFile.getEncoding() + "\n");
-//            ZipOutputStream zos = new ZipOutputStream (new File("D:\\a\\b.zip"));
+//            ZipOutputStream zos = new ZipOutputStream (new File("D:\\aService\\b.zip"));
 //            zos.setLevel(ZipOutputStream.LEVEL_BEST);
 //            zos.setZipEncoding(zipFile.getZipEncoding());
 //
@@ -80,13 +80,13 @@ public class ZipManager {
 //                if(zipEntry.getName().endsWith("/"))
 //                    continue;
 //
-//                if (zipEntry.getName().equalsIgnoreCase("a.txt"))
+//                if (zipEntry.getName().equalsIgnoreCase("aService.txt"))
 //                    zipEntry.setName("我爱蛋蛋.txt");
 //
 //                zos.copyZipEntry(zipEntry, zipFile);
 //            }
-//            zos.putNextEntry("a.txt");
-//            zos.writeFully(new FileInputStream(new File("D:\\a\\a.txt")));
+//            zos.putNextEntry("aService.txt");
+//            zos.writeFully(new FileInputStream(new File("D:\\aService\\aService.txt")));
 //
 //            zos.putNextEntry("文件夹/");
 //

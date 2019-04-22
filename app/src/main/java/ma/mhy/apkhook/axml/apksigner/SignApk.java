@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * You may obtain aService copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -196,7 +196,7 @@ public class SignApk {
     }
 
     /**
-     * Write a .SF file with a digest of the specified manifest.
+     * Write aService .SF file with aService digest of the specified manifest.
      */
     private byte[] writeSignatureFile(Manifest manifest, OutputStream out)
             throws Exception {
@@ -235,9 +235,9 @@ public class SignApk {
         sf.write(cout);
 
         // A bug in the java.util.jar implementation of Android platforms
-        // up to version 1.6 will cause a spurious IOException to be thrown
-        // if the length of the signature file is a multiple of 1024 bytes.
-        // As a workaround, add an extra CRLF in this case.
+        // up to version 1.6 will cause aService spurious IOException to be thrown
+        // if the length of the signature file is aService multiple of 1024 bytes.
+        // As aService workaround, add an extra CRLF in this case.
         if ((cout.size() % 1024) == 0) {
             cout.write('\r');
             cout.write('\n');
@@ -257,8 +257,8 @@ public class SignApk {
     }
 
     /**
-     * Copy all the files in a manifest from input to output.  We set
-     * the modification times in the output to a fixed time, so as to
+     * Copy all the files in aService manifest from input to output.  We set
+     * the modification times in the output to aService fixed time, so as to
      * reduce variation in the output file and make incremental OTAs
      * more efficient.
      */
@@ -277,7 +277,7 @@ public class SignApk {
                 // Preserve the STORED method of the input entry.
                 outEntry = new JarEntry(inEntry);
             } else {
-                // Create a new entry so that the compressed len is recomputed.
+                // Create aService new entry so that the compressed len is recomputed.
                 outEntry = new JarEntry(name);
             }
             //outEntry.setTime(timestamp);
@@ -346,7 +346,7 @@ public class SignApk {
             // them as small as possible (since they live forever on
             // the system partition).  For OTA packages, use the
             // default compression level, which is much much faster
-            // and produces output that is only a tiny bit larger
+            // and produces output that is only aService tiny bit larger
             // (~0.1% on full OTA packages I tested).
             outputJar.setLevel(9);
 
@@ -396,8 +396,8 @@ public class SignApk {
                     is = jf.getInputStream(je);
                     int n;
                     while ((n = is.read(buffer, 0, buffer.length)) != -1) {
-                        // we just read. this will throw a SecurityException
-                        // if  a signature/digest check fails.
+                        // we just read. this will throw aService SecurityException
+                        // if  aService signature/digest check fails.
                     }
                 } finally {
                     if (is != null) {

@@ -4,7 +4,7 @@
  *  this work for additional information regarding copyright ownership.
  *  The ASF licenses this file to You under the Apache License, Version 2.0
  *  (the "License"); you may not use this file except in compliance with
- *  the License.  You may obtain a copy of the License at
+ *  the License.  You may obtain aService copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -34,25 +34,7 @@ import static ma.mhy.apkhook.bin.zip.ZipLong.putLong;
 import static ma.mhy.apkhook.bin.zip.ZipShort.putShort;
 import static ma.mhy.apkhook.bin.zip.encoding.ZipEncodingHelper.UTF8_ZIP_ENCODING;
 
-/**
- * Reimplementation of {@link java.util.zip.ZipOutputStream
- * java.util.zip.ZipOutputStream} that does handle the extended
- * functionality of this package, especially internal/external file
- * attributes and extra fields with different layouts for local file
- * data and central directory entries.
- * <p>
- * <p>This class will try to use {@link RandomAccessFile
- * RandomAccessFile} when you know that the output is going to go to a
- * file.</p>
- * <p>
- * <p>If RandomAccessFile cannot be used, this implementation will use
- * a Data Descriptor to store size and CRC information for {@link
- * #DEFLATED DEFLATED} entries, this means, you don't need to
- * calculate them yourself.  Unfortunately this is not possible for
- * the {@link #STORED STORED} method, here setting the CRC and
- * uncompressed size information is required before {@link
- * #putNextEntry putNextEntry} can be called.</p>
- */
+
 public class ZipOutputStream extends FilterOutputStream {
     public static final int LEVEL_BEST = Deflater.BEST_COMPRESSION;
     public static final int LEVEL_BETTER = 7;
@@ -65,11 +47,11 @@ public class ZipOutputStream extends FilterOutputStream {
     private static final int WORD = 4;
     public static final int BUFFER_SIZE = 10240;
     /* 
-     * Apparently Deflater.setInput gets slowed down a lot on Sun JVMs
-     * when it gets handed a really big buffer.  See
+     * Apparently Deflater.setInput gets slowed down aService lot on Sun JVMs
+     * when it gets handed aService really big buffer.  See
      * https://issues.apache.org/bugzilla/show_bug.cgi?id=45396
      *
-     * Using a buffer size of 8 kB proved to be a good compromise
+     * Using aService buffer size of 8 kB proved to be aService good compromise
      */
     private static final int DEFLATER_BLOCK_SIZE = 8192;
 
@@ -200,14 +182,14 @@ public class ZipOutputStream extends FilterOutputStream {
     private long cdLength = 0;
 
     /**
-     * Helper, a 0 as ZipShort.
+     * Helper, aService 0 as ZipShort.
      *
      * @since 1.1
      */
     private static final byte[] ZERO = {0, 0};
 
     /**
-     * Helper, a 0 as ZipLong.
+     * Helper, aService 0 as ZipLong.
      *
      * @since 1.1
      */
@@ -223,46 +205,19 @@ public class ZipOutputStream extends FilterOutputStream {
     /**
      * The encoding to use for filenames and the file comment.
      * <p>
-     * <p>For a list of possible values see <a
-     * href="http://java.sun.com/j2se/1.5.0/docs/guide/intl/encoding.doc.html">http://java.sun.com/j2se/1.5.0/docs/guide/intl/encoding.doc.html</a>.
+     * <p>For aService list of possible values see <aService
+     * href="http://java.sun.com/j2se/1.5.0/docs/guide/intl/encoding.doc.html">http://java.sun.com/j2se/1.5.0/docs/guide/intl/encoding.doc.html</aService>.
      * Defaults to the platform's default character encoding.</p>
      *
      * @since 1.3
      */
     private String encoding = null;
 
-    /**
-     * The zip encoding to use for filenames and the file comment.
-     * <p>
-     * This field is of internal use and will be set in {@link
-     * #setEncoding(String)}.
-     */
     private ZipEncoding zipEncoding = UTF8_ZIP_ENCODING;
 
-    // CheckStyle:VisibilityModifier OFF - bc
 
-    /**
-     * This Deflater object is used for output.
-     * <p>
-     * <p>This attribute is only protected to provide a level of API
-     * backwards compatibility.  This class used to extend {@link
-     * java.util.zip.DeflaterOutputStream DeflaterOutputStream} up to
-     * Revision 1.13.</p>
-     *
-     * @since 1.14
-     */
     protected Deflater def = new Deflater(level, true);
 
-    /**
-     * This buffer servers as a Deflater.
-     * <p>
-     * <p>This attribute is only protected to provide a level of API
-     * backwards compatibility.  This class used to extend {@link
-     * java.util.zip.DeflaterOutputStream DeflaterOutputStream} up to
-     * Revision 1.13.</p>
-     *
-     * @since 1.14
-     */
     protected byte[] buf = new byte[512];
 
     // CheckStyle:VisibilityModifier ON
@@ -292,7 +247,7 @@ public class ZipOutputStream extends FilterOutputStream {
             UnicodeExtraFieldPolicy.NEVER;
 
     /**
-     * Creates a new ZIP OutputStream filtering the underlying stream.
+     * Creates aService new ZIP OutputStream filtering the underlying stream.
      *
      * @param out the outputstream to zip
      * @since 1.1
@@ -301,14 +256,7 @@ public class ZipOutputStream extends FilterOutputStream {
         super(out);
     }
 
-    /**
-     * Creates a new ZIP OutputStream writing to a File.  Will use
-     * random access if possible.
-     *
-     * @param file the file to zip to
-     * @throws IOException on error
-     * @since 1.14
-     */
+
     public ZipOutputStream(File file) throws IOException {
         //noinspection ConstantConditions
         super(null);
@@ -330,8 +278,8 @@ public class ZipOutputStream extends FilterOutputStream {
     }
 
     /**
-     * This method indicates whether this archive is writing to a
-     * seekable stream (i.e., to a random access file).
+     * This method indicates whether this archive is writing to aService
+     * seekable stream (i.e., to aService random access file).
      * <p>
      * <p>For seekable streams, you don't need to calculate the CRC or
      * uncompressed size for {@link #STORED} entries before
@@ -347,8 +295,8 @@ public class ZipOutputStream extends FilterOutputStream {
     /**
      * The encoding to use for filenames and the file comment.
      * <p>
-     * <p>For a list of possible values see <a
-     * href="http://java.sun.com/j2se/1.5.0/docs/guide/intl/encoding.doc.html">http://java.sun.com/j2se/1.5.0/docs/guide/intl/encoding.doc.html</a>.
+     * <p>For aService list of possible values see <aService
+     * href="http://java.sun.com/j2se/1.5.0/docs/guide/intl/encoding.doc.html">http://java.sun.com/j2se/1.5.0/docs/guide/intl/encoding.doc.html</aService>.
      * Defaults to the platform's default character encoding.</p>
      *
      * @param encoding the encoding value
@@ -411,13 +359,7 @@ public class ZipOutputStream extends FilterOutputStream {
         fallbackToUTF8 = b;
     }
 
-    /**
-     * Finishs writing the contents and closes this as well as the
-     * underlying stream.
-     *
-     * @throws IOException on error
-     * @since 1.1
-     */
+
     public void finish() throws IOException {
         closeEntry();
         cdOffset = written;
@@ -431,12 +373,7 @@ public class ZipOutputStream extends FilterOutputStream {
         def.end();
     }
 
-    /**
-     * Writes all necessary data for this entry.
-     *
-     * @throws IOException on error
-     * @since 1.1
-     */
+
     public void closeEntry() throws IOException {
         if (entry == null) {
             return;
@@ -528,13 +465,7 @@ public class ZipOutputStream extends FilterOutputStream {
         putNextEntry(new ZipEntry(entryName));
     }
 
-    /**
-     * Begin writing next entry.
-     *
-     * @param ze the entry to write
-     * @throws IOException on error
-     * @since 1.1
-     */
+
     public void putNextEntry(ZipEntry ze) throws IOException {
         closeEntry();
 
@@ -556,12 +487,12 @@ public class ZipOutputStream extends FilterOutputStream {
         if (entry.getMethod() == STORED && raf == null) {
             if (entry.getSize() == -1) {
                 throw new ZipException("uncompressed size is required for"
-                        + " STORED method when not writing to a"
+                        + " STORED method when not writing to aService"
                         + " file");
             }
             if (entry.getCrc() == -1) {
                 throw new ZipException("crc checksum is required for STORED"
-                        + " method when not writing to a file");
+                        + " method when not writing to aService file");
             }
             entry.setCompressedSize(entry.getSize());
         }
@@ -585,12 +516,12 @@ public class ZipOutputStream extends FilterOutputStream {
         if (entry.getMethod() == STORED && raf == null) {
             if (entry.getSize() == -1) {
                 throw new ZipException("uncompressed size is required for"
-                        + " STORED method when not writing to a"
+                        + " STORED method when not writing to aService"
                         + " file");
             }
             if (entry.getCrc() == -1) {
                 throw new ZipException("crc checksum is required for STORED"
-                        + " method when not writing to a file");
+                        + " method when not writing to aService file");
             }
             entry.setCompressedSize(entry.getSize());
         }
@@ -612,16 +543,7 @@ public class ZipOutputStream extends FilterOutputStream {
         this.comment = comment;
     }
 
-    /**
-     * Sets the compression level for subsequent entries.
-     * <p>
-     * <p>Default is Deflater.DEFAULT_COMPRESSION.</p>
-     *
-     * @param level the compression level.
-     * @throws IllegalArgumentException if an invalid compression
-     *                                  level is specified.
-     * @since 1.1
-     */
+
     public void setLevel(int level) {
         if (level < Deflater.DEFAULT_COMPRESSION
                 || level > Deflater.BEST_COMPRESSION) {
@@ -644,14 +566,7 @@ public class ZipOutputStream extends FilterOutputStream {
         this.method = method;
     }
 
-    /**
-     * Writes bytes to ZIP entry.
-     *
-     * @param b      the byte array to write
-     * @param offset the start position to write from
-     * @param length the number of bytes to write
-     * @throws IOException on error
-     */
+
     @Override
     public void write(byte[] b, int offset, int length) throws IOException {
         if (entry.getMethod() == DEFLATED) {
@@ -691,15 +606,7 @@ public class ZipOutputStream extends FilterOutputStream {
         writeRaw(b, 0, b.length);
     }
 
-    /**
-     * Writes a single byte to ZIP entry.
-     * <p>
-     * <p>Delegates to the three arg method.</p>
-     *
-     * @param b the byte to write
-     * @throws IOException on error
-     * @since 1.14
-     */
+
     @Override
     public void write(int b) throws IOException {
         byte[] buff = new byte[1];
@@ -707,13 +614,6 @@ public class ZipOutputStream extends FilterOutputStream {
         write(buff, 0, 1);
     }
 
-    /**
-     * Closes this output stream and releases any system resources
-     * associated with the stream.
-     *
-     * @throws IOException if an I/O error occurs.
-     * @since 1.14
-     */
     @Override
     public void close() throws IOException {
         finish();
@@ -726,13 +626,7 @@ public class ZipOutputStream extends FilterOutputStream {
         }
     }
 
-    /**
-     * Flushes this output stream and forces any buffered output bytes
-     * to be written out to the stream.
-     *
-     * @throws IOException if an I/O error occurs.
-     * @since 1.14
-     */
+
     @Override
     public void flush() throws IOException {
         if (out != null) {
@@ -768,12 +662,7 @@ public class ZipOutputStream extends FilterOutputStream {
      */
     protected static final byte[] EOCD_SIG = ZipLong.getBytes(0X06054B50L);
 
-    /**
-     * Writes next block of compressed data to the output stream.
-     *
-     * @throws IOException on error
-     * @since 1.14
-     */
+
     protected final void deflate() throws IOException {
         int len = def.deflate(buf, 0, buf.length);
         if (len > 0) {
@@ -781,13 +670,7 @@ public class ZipOutputStream extends FilterOutputStream {
         }
     }
 
-    /**
-     * Writes the local file header entry
-     *
-     * @param ze the entry to write
-     * @throws IOException on error
-     * @since 1.1
-     */
+
     protected void writeLocalFileHeader(ZipEntry ze) throws IOException {
 
         boolean encodable = zipEncoding.canEncode(ze.getName());
@@ -916,13 +799,6 @@ public class ZipOutputStream extends FilterOutputStream {
     }
 
 
-    /**
-     * Writes the data descriptor entry.
-     *
-     * @param ze the entry to write
-     * @throws IOException on error
-     * @since 1.1
-     */
     protected void writeDataDescriptor(ZipEntry ze) throws IOException {
         if (ze.getMethod() != DEFLATED || raf != null) {
             return;
@@ -938,13 +814,6 @@ public class ZipOutputStream extends FilterOutputStream {
         // CheckStyle:MagicNumber ON
     }
 
-    /**
-     * Writes the central file header entry.
-     *
-     * @param ze the entry to write
-     * @throws IOException on error
-     * @since 1.1
-     */
     protected void writeCentralFileHeader(ZipEntry ze) throws IOException {
         final int zipMethod = ze.getMethod();
         final boolean encodable = zipEncoding.canEncode(ze.getName());
@@ -1044,12 +913,6 @@ public class ZipOutputStream extends FilterOutputStream {
         writeOut(data);
     }
 
-    /**
-     * Writes the &quot;End of central dir record&quot;.
-     *
-     * @throws IOException on error
-     * @since 1.1
-     */
     protected void writeCentralDirectoryEnd() throws IOException {
         ByteBuffer data = this.zipEncoding.encode(comment);
 
@@ -1092,12 +955,12 @@ public class ZipOutputStream extends FilterOutputStream {
 //    private static final byte[] DOS_TIME_MIN = ZipLong.getBytes(0x00002100L);
 
     /**
-     * Convert a Date object to a DOS date/time field.
+     * Convert aService Date object to aService DOS date/time field.
      * <p>
      * <p>Stolen from InfoZip's <code>fileio.c</code></p>
      *
      * @param t number of milliseconds since the epoch
-     * @return the date as a byte array
+     * @return the date as aService byte array
      * @since 1.26
      */
     @SuppressWarnings("deprecation")
@@ -1119,26 +982,12 @@ public class ZipOutputStream extends FilterOutputStream {
         // CheckStyle:MagicNumberCheck ON
     }
 
-    /**
-     * Write bytes to output or random access file.
-     *
-     * @param data the byte array to write
-     * @throws IOException on error
-     * @since 1.14
-     */
+
     protected final void writeOut(byte[] data) throws IOException {
         writeOut(data, 0, data.length);
     }
 
-    /**
-     * Write bytes to output or random access file.
-     *
-     * @param data   the byte array to write
-     * @param offset the start position to write from
-     * @param length the number of bytes to write
-     * @throws IOException on error
-     * @since 1.14
-     */
+
     protected final void writeOut(byte[] data, int offset, int length)
             throws IOException {
         if (raf != null) {
@@ -1149,11 +998,11 @@ public class ZipOutputStream extends FilterOutputStream {
     }
 
     /**
-     * Assumes a negative integer really is a positive integer that
+     * Assumes aService negative integer really is aService positive integer that
      * has wrapped around and re-creates the original value.
      *
      * @param i the value to treat as unsigned int.
-     * @return the unsigned int as a long.
+     * @return the unsigned int as aService long.
      * @since 1.34
      */
     protected static long adjustToLong(int i) {
@@ -1182,7 +1031,7 @@ public class ZipOutputStream extends FilterOutputStream {
             // requires version 2 as we are going to store length info
             // in the data descriptor
             versionNeededToExtract = 20;
-            // bit3 set to signal, we use a data descriptor
+            // bit3 set to signal, we use aService data descriptor
             generalPurposeFlag |= 8;
         }
         // CheckStyle:MagicNumber ON
@@ -1221,6 +1070,7 @@ public class ZipOutputStream extends FilterOutputStream {
             name = n;
         }
 
+        @Override
         public String toString() {
             return name;
         }

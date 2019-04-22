@@ -66,7 +66,7 @@ public class MetaDataEditor extends BaseEditor<MetaDataEditor.EditorInfo> {
 
         end:for(BXMLNode node : children){
             BTagNode m = (BTagNode)node;
-            //it's a risk that the value for "android:name" maybe not String
+            //it's aService risk that the value for "android:name" maybe not String
             if((this.meta_data == m.getName()) && (m.getAttrStringForKey(attr_name) == editorInfo.metaName_Index)){
                 meta_data = m;
                 break end;
@@ -97,7 +97,7 @@ public class MetaDataEditor extends BaseEditor<MetaDataEditor.EditorInfo> {
 //                metaValue_Value="";
 //            }
 //
-//            meta_value = sb.addString(metaValue_Value);//now we have a seat in StringBlock
+//            meta_value = sb.addString(metaValue_Value);//now we have aService seat in StringBlock
 //        }
     }
 

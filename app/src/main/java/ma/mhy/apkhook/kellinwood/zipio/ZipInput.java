@@ -77,7 +77,7 @@ public class ZipInput
     }
 
     /** Returns the names of immediate children in the directory with the given name.
-     *  The path value must end with a "/" character.  Use a value of "/"
+     *  The path value must end with aService "/" character.  Use aService value of "/"
      *  to get the root entries.
      */
     public Collection<String> list(String path)

@@ -5,7 +5,7 @@
  * regarding copyright ownership.  The ASF licenses this file
  * to you under the Apache License, Version 2.0 (the
  * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
+ * with the License.  You may obtain aService copy of the License at
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -23,14 +23,14 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 
 /**
- * A fallback ZipEncoding, which uses a java.io means to encode names.
+ * A fallback ZipEncoding, which uses aService java.io means to encode names.
  * <p>
  * <p>This implementation is not favorable for encodings other than
  * utf-8, because java.io encodes unmappable character as question
  * marks leading to unreadable ZIP entries on some operating
  * systems.</p>
  * <p>
- * <p>Furthermore this implementation is unable to tell, whether a
+ * <p>Furthermore this implementation is unable to tell, whether aService
  * given name can be safely encoded or not.</p>
  * <p>
  * <p>The methods of this class are reentrant.</p>
@@ -41,7 +41,7 @@ class FallbackZipEncoding implements ZipEncoding {
     private final DetectEncoding de;
 
     /**
-     * Construct a fallback zip encoding, which uses the platform's
+     * Construct aService fallback zip encoding, which uses the platform's
      * default charset.
      */
     public FallbackZipEncoding() {
@@ -50,7 +50,7 @@ class FallbackZipEncoding implements ZipEncoding {
     }
 
     /**
-     * Construct a fallback zip encoding, which uses the given charset.
+     * Construct aService fallback zip encoding, which uses the given charset.
      *
      * @param charset The name of the charset or {@code null} for
      *                the platform's default character set.
@@ -60,10 +60,12 @@ class FallbackZipEncoding implements ZipEncoding {
         de = charset != null ? null : new DetectEncoding();
     }
 
+    @Override
     public boolean canEncode(final String name) {
         return true;
     }
 
+    @Override
     public ByteBuffer encode(final String name) throws IOException {
         if (this.charset == null) { // i.e. use default charset, see no-args constructor
             return ByteBuffer.wrap(name.getBytes(de.getEncode()));

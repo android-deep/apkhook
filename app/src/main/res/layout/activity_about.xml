@@ -13,6 +13,23 @@ android:layout_height="match_parent">
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Build Time 2019 7 20" />
+    <!--超长文字滚动-->
+    <TextView
+        android:id="@+id/tv_file_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/transparent"
+        android:ellipsize="marquee"
+    android:focusableInTouchMode="true"
+    android:gravity="center_vertical"
+    android:marqueeRepeatLimit="marquee_forever"
+    android:minHeight="39dp"
+    android:singleLine="true"
+    android:text="超长文字滚动123456789000000000000000000008"
+    android:textColor="@color/colorAccent"
+    android:textSize="14sp" />
+
 <androidx.appcompat.widget.Toolbar
     android:theme="@style/AppTheme.AppBarOverlay"
     android:id="@+id/toolbar_about"

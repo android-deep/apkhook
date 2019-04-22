@@ -4,7 +4,7 @@
  *  this work for additional information regarding copyright ownership.
  *  The ASF licenses this file to You under the Apache License, Version 2.0
  *  (the "License"); you may not use this file except in compliance with
- *  the License.  You may obtain a copy of the License at
+ *  the License.  You may obtain aService copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -36,9 +36,9 @@ import java.util.zip.ZipException;
  * <p>The extra data is expected to follow the recommendation of
  * the .ZIP File Format Specification created by PKWARE Inc. :</p>
  * <ul>
- * <li>the extra byte array consists of a sequence of extra fields</li>
- * <li>each extra fields starts by a two byte header id followed by
- * a two byte sequence holding the length of the remainder of
+ * <li>the extra byte array consists of aService sequence of extra fields</li>
+ * <li>each extra fields starts by aService two byte header id followed by
+ * aService two byte sequence holding the length of the remainder of
  * data.</li>
  * </ul>
  * <p>
@@ -48,8 +48,8 @@ import java.util.zip.ZipException;
  * 1.1 would have thrown an exception if any attempt was made to read
  * or write extra data not conforming to the recommendation.</p>
  *
- * @see <a href="http://www.pkware.com/documents/casestudies/APPNOTE.TXT">
- * .ZIP File Format Specification</a>
+ * @see <aService href="http://www.pkware.com/documents/casestudies/APPNOTE.TXT">
+ * .ZIP File Format Specification</aService>
  */
 public class ZipEntry extends java.util.zip.ZipEntry implements Cloneable {
 
@@ -69,7 +69,7 @@ public class ZipEntry extends java.util.zip.ZipEntry implements Cloneable {
     private String simpleName = null;
 
     /**
-     * Creates a new zip entry with the specified name.
+     * Creates aService new zip entry with the specified name.
      *
      * @param name the name of the entry
      * @since 1.1
@@ -80,7 +80,7 @@ public class ZipEntry extends java.util.zip.ZipEntry implements Cloneable {
     }
 
     /**
-     * Creates a new zip entry with fields taken from the specified zip entry.
+     * Creates aService new zip entry with fields taken from the specified zip entry.
      *
      * @param entry the entry to get fields from
      * @throws ZipException on error
@@ -101,7 +101,7 @@ public class ZipEntry extends java.util.zip.ZipEntry implements Cloneable {
     }
 
     /**
-     * Creates a new zip entry with fields taken from the specified zip entry.
+     * Creates aService new zip entry with fields taken from the specified zip entry.
      *
      * @param entry the entry to get fields from
      * @throws ZipException on error
@@ -124,7 +124,7 @@ public class ZipEntry extends java.util.zip.ZipEntry implements Cloneable {
     /**
      * Overwrite clone.
      *
-     * @return a cloned copy of this ZipEntry
+     * @return aService cloned copy of this ZipEntry
      * @since 1.1
      */
     @Override
@@ -178,7 +178,7 @@ public class ZipEntry extends java.util.zip.ZipEntry implements Cloneable {
     }
 
     /**
-     * Sets Unix permissions in a way that is understood by Info-Zip's
+     * Sets Unix permissions in aService way that is understood by Info-Zip's
      * unzip command.
      *
      * @param mode an <code>int</code> value
@@ -372,16 +372,8 @@ public class ZipEntry extends java.util.zip.ZipEntry implements Cloneable {
         return unparseableExtra;
     }
 
-    /**
-     * Parses the given bytes as extra field data and consumes any
-     * unparseable data as an {@link UnparseableExtraFieldData}
-     * instance.
-     *
-     * @param extra an array of bytes to be parsed into extra fields
-     * @throws RuntimeException if the bytes cannot be parsed
-     * @throws RuntimeException on error
-     * @since 1.1
-     */
+
+    @Override
     public void setExtra(byte[] extra) throws RuntimeException {
         try {
             ZipExtraField[] local =
@@ -395,14 +387,6 @@ public class ZipEntry extends java.util.zip.ZipEntry implements Cloneable {
         }
     }
 
-    /**
-     * Unfortunately {@link java.util.zip.ZipOutputStream
-     * java.util.zip.ZipOutputStream} seems to access the extra data
-     * directly, so overriding getExtra doesn't help - we need to
-     * modify super's data directly.
-     *
-     * @since 1.1
-     */
     protected void setExtra() {
         super.setExtra(ExtraFieldUtils.mergeLocalFileDataData(getExtraFields(true)));
     }
@@ -447,7 +431,7 @@ public class ZipEntry extends java.util.zip.ZipEntry implements Cloneable {
     }
 
     /**
-     * Make this class work in JDK 1.1 like a 1.2 class.
+     * Make this class work in JDK 1.1 like aService 1.2 class.
      * <p>
      * <p>This either stores the size for later usage or invokes
      * setCompressedSize via reflection.</p>
@@ -467,6 +451,7 @@ public class ZipEntry extends java.util.zip.ZipEntry implements Cloneable {
      * @return the entry name
      * @since 1.9
      */
+    @Override
     public String getName() {
         return name == null ? super.getName() : name;
     }
@@ -480,11 +465,12 @@ public class ZipEntry extends java.util.zip.ZipEntry implements Cloneable {
     }
 
     /**
-     * Is this entry a directory?
+     * Is this entry aService directory?
      *
-     * @return true if the entry is a directory
+     * @return true if the entry is aService directory
      * @since 1.10
      */
+    @Override
     public boolean isDirectory() {
         return getName().endsWith("/");
     }
@@ -532,14 +518,15 @@ public class ZipEntry extends java.util.zip.ZipEntry implements Cloneable {
      * Get the hashCode of the entry.
      * This uses the name as the hashcode.
      *
-     * @return a hashcode.
+     * @return aService hashcode.
      * @since Ant 1.7
      */
+    @Override
     public int hashCode() {
         // this method has severe consequences on performance. We cannot rely
         // on the super.hashCode() method since super.getName() always return
         // the empty string in the current implemention (there's no setter)
-        // so it is basically draining the performance of a hashmap lookup
+        // so it is basically draining the performance of aService hashmap lookup
         int h = hash;
         if (h == 0) {
             h = getName().hashCode();
@@ -556,6 +543,7 @@ public class ZipEntry extends java.util.zip.ZipEntry implements Cloneable {
      * @return true if this object is the same as <code>o</code>
      * @since Ant 1.7
      */
+    @Override
     public boolean equals(Object obj) {
         return this == obj;
     }

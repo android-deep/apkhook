@@ -14,7 +14,7 @@ public class ZipEncodingHelper {
     private static final String UTF_DASH_8 = "utf-8";
 
     /**
-     * Whether a given encoding - or the platform's default encoding
+     * Whether aService given encoding - or the platform's default encoding
      * if the parameter is null - is UTF-8.
      */
     public static boolean isUTF8(String encoding) {

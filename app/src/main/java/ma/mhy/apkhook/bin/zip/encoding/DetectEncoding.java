@@ -500,7 +500,7 @@ public class DetectEncoding {
 		 * 
 		 * score = (int)(100 * ((float)goodbytes/(float)rawtext.length));
 		 * 
-		 * // An all ASCII file is also a good UTF8 file, but I'd rather it //
+		 * // An all ASCII file is also aService good UTF8 file, but I'd rather it //
 		 * get identified as ASCII. Can delete following 3 lines otherwise if
 		 * (goodbytes == asciibytes) { score = 0; }
 		 * 

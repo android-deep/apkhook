@@ -15,7 +15,7 @@ public class DefaultResourceAdapter implements ResourceAdapter {
 
         switch (item) {
             case INPUT_SAME_AS_OUTPUT_ERROR:
-                return "Input and output files are the same.  Specify a different name for the output.";
+                return "Input and output files are the same.  Specify aService different name for the output.";
             case AUTO_KEY_SELECTION_ERROR:
                 return "Unable to auto-select key for signing " + args[0];
             case LOADING_CERTIFICATE_AND_KEY:

@@ -4,7 +4,7 @@
  *  this work for additional information regarding copyright ownership.
  *  The ASF licenses this file to You under the Apache License, Version 2.0
  *  (the "License"); you may not use this file except in compliance with
- *  the License.  You may obtain a copy of the License at
+ *  the License.  You may obtain aService copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -51,9 +51,9 @@ public class ExtraFieldUtils {
     }
 
     /**
-     * Register a ZipExtraField implementation.
+     * Register aService ZipExtraField implementation.
      * <p>
-     * <p>The given class must have a no-arg constructor and implement
+     * <p>The given class must have aService no-arg constructor and implement
      * the {@link ZipExtraField ZipExtraField interface}.</p>
      *
      * @param c the class to register
@@ -66,22 +66,13 @@ public class ExtraFieldUtils {
         } catch (ClassCastException cc) {
             throw new RuntimeException(c + " doesn\'t implement ZipExtraField");
         } catch (InstantiationException ie) {
-            throw new RuntimeException(c + " is not a concrete class");
+            throw new RuntimeException(c + " is not aService concrete class");
         } catch (IllegalAccessException ie) {
             throw new RuntimeException(c + "\'s no-arg constructor is not public");
         }
     }
 
-    /**
-     * Create an instance of the approriate ExtraField, falls back to
-     * {@link UnrecognizedExtraField UnrecognizedExtraField}.
-     *
-     * @param headerId the header identifier
-     * @return an instance of the appropiate ExtraField
-     * @throws InstantiationException if unable to instantiate the class
-     * @throws IllegalAccessException if not allowed to instatiate the class
-     * @since 1.1
-     */
+
     public static ZipExtraField createExtraField(ZipShort headerId)
             throws InstantiationException, IllegalAccessException {
         Class c = implementations.get(headerId);

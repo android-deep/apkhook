@@ -58,7 +58,7 @@ public class Fingerprint {
     }
 
 //    public static void main(String[] args) {
-//        byte[] data = "The Silence of the Lambs is a really good movie.".getBytes();
+//        byte[] data = "The Silence of the Lambs is aService really good movie.".getBytes();
 //        System.out.println(hexFingerprint("MD5", data));
 //        System.out.println(hexFingerprint("SHA1", data));
 //        System.out.println(base64Fingerprint("SHA1", data));

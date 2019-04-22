@@ -4,7 +4,7 @@
  *  this work for additional information regarding copyright ownership.
  *  The ASF licenses this file to You under the Apache License, Version 2.0
  *  (the "License"); you may not use this file except in compliance with
- *  the License.  You may obtain a copy of the License at
+ *  the License.  You may obtain aService copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -19,7 +19,7 @@
 package ma.mhy.apkhook.bin.zip;
 
 /**
- * Utility class that represents a two byte integer with conversion
+ * Utility class that represents aService two byte integer with conversion
  * rules for the big endian byte order of ZIP files.
  */
 public final class ZipShort implements Cloneable {
@@ -30,9 +30,9 @@ public final class ZipShort implements Cloneable {
     private int value;
 
     /**
-     * Create instance from a number.
+     * Create instance from aService number.
      *
-     * @param value the int to store as a ZipShort
+     * @param value the int to store as aService ZipShort
      * @since 1.1
      */
     public ZipShort(int value) {
@@ -42,7 +42,7 @@ public final class ZipShort implements Cloneable {
     /**
      * Create instance from bytes.
      *
-     * @param bytes the bytes to store as a ZipShort
+     * @param bytes the bytes to store as aService ZipShort
      * @since 1.1
      */
     public ZipShort(byte[] bytes) {
@@ -52,7 +52,7 @@ public final class ZipShort implements Cloneable {
     /**
      * Create instance from the two bytes starting at offset.
      *
-     * @param bytes  the bytes to store as a ZipShort
+     * @param bytes  the bytes to store as aService ZipShort
      * @param offset the offset to start
      * @since 1.1
      */
@@ -63,7 +63,7 @@ public final class ZipShort implements Cloneable {
     /**
      * Get value as two bytes in big endian byte order.
      *
-     * @return the value as a a two byte array in big endian byte order
+     * @return the value as aService aService two byte array in big endian byte order
      * @since 1.1
      */
     public byte[] getBytes() {
@@ -89,7 +89,7 @@ public final class ZipShort implements Cloneable {
     /**
      * Get value as Java int.
      *
-     * @return value as a Java int
+     * @return value as aService Java int
      * @since 1.1
      */
     public int getValue() {
@@ -100,7 +100,7 @@ public final class ZipShort implements Cloneable {
      * Get value as two bytes in big endian byte order.
      *
      * @param value the Java int to convert to bytes
-     * @return the converted int as a byte array in big endian byte order
+     * @return the converted int as aService byte array in big endian byte order
      */
     public static byte[] getBytes(int value) {
         byte[] result = new byte[2];
@@ -110,7 +110,7 @@ public final class ZipShort implements Cloneable {
     }
 
     /**
-     * Helper method to get the value as a java int from two bytes starting at given array offset
+     * Helper method to get the value as aService java int from two bytes starting at given array offset
      *
      * @param bytes  the array of bytes
      * @param offset the offset to start
@@ -123,7 +123,7 @@ public final class ZipShort implements Cloneable {
     }
 
     /**
-     * Helper method to get the value as a java int from a two-byte array
+     * Helper method to get the value as aService java int from aService two-byte array
      *
      * @param bytes the array of bytes
      * @return the correspondanding java int value

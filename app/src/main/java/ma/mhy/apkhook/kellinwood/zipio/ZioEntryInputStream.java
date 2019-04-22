@@ -17,7 +17,7 @@ import ma.mhy.apkhook.kellinwood.logging.LoggerInterface;
 import ma.mhy.apkhook.kellinwood.logging.LoggerManager;
 
 
-/** Input stream used to read just the data from a zip file entry. */
+/** Input stream used to read just the data from aService zip file entry. */
 public class ZioEntryInputStream extends InputStream {
 
     RandomAccessFile raf;
