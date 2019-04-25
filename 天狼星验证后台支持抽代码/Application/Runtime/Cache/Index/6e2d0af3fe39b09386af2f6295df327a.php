@@ -1,0 +1,84 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head>
+     <title>缥缈轩网络验证</title>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="keywords" content="缥缈轩网络验证系统 软件验证 脚本验证">
+    <meta name="description" content="免费的网络验证系统 提卡免费 可以管理多个软件 功能丰富">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/Public/css/index.css">
+    <link rel="stylesheet" href="/Public/css/a100e2e6.app.css">
+    <link rel="stylesheet" href="/Public/css/common.css">
+    <script src="/Public/js/jquery-1.9.1.min.js"></script>
+    <script src="/Public/js/bootstrap.min.js"></script>
+    <script src="/Public/js/common.js"></script>
+    <style type="text/css">
+        div.content {
+            padding: 30px 50px 30px 50px;
+        }
+        p {
+            padding: 5px;
+            letter-spacing: 2px;
+            line-height: 20px;
+        }
+        h3 {
+            padding-top: 10px;
+        }
+        dl {
+            padding-left: 40px;
+        }
+        dl li {
+            letter-spacing: 2px;
+            padding: 3px;
+        }
+        h1 {
+            display: none;
+        }
+        
+        
+        
+        
+        
+        
+        body {
+        background: #f1f4f7;
+    }
+    .view {
+        margin: 0 auto;
+        padding: 100px;
+    }
+
+    .view form {
+        width: 400px;
+        margin: 0 auto;
+        background: white;
+        padding: 20px 50px 20px 50px;
+    }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <h1>缥缈轩网络验证</h1>
+   <div class="view">
+    <form class="query-form" role="form" id="queryform" name="queryForm" method="post">
+        <div class="form-group">
+            <label for="inputCard" class="control-label">授权码</label>
+            <input type="text" class="form-control" id="inputCard" name="card" tabindex="1"
+                   placeholder="12位大写英文字母或数字">
+        </div>
+        <div class="form-group" style="text-align:center">
+            <button type="submit" name="query" class="btn btn-primary" tabindex="2">查询</button>
+        </div>
+    </form>
+</div>
+
+    
+    <div class="bottom">
+    Copyright © 2018  缥缈轩网络验证(天狼星)
+</div>
+
+</div>
+</body>
+</html>
