@@ -10,7 +10,52 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a1e340c-30d0-4e8b-852c-a911f541f0c8" name="默认" comment="" />
+    <list default="true" id="9a1e340c-30d0-4e8b-852c-a911f541f0c8" name="默认" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_haha_haha_2_0_4_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_leakcanary_leakcanary_analyzer_1_6_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_leakcanary_leakcanary_android_1_6_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_leakcanary_leakcanary_android_no_op_1_6_1_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_squareup_leakcanary_leakcanary_watcher_1_6_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_jetbrains_trove4j_trove4j_20160824_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/assets/run.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/JieChiActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_jie_chi.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/gradle_models.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/MyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/fragment/MainFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/fragment/MainFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星注入器/无名指1.8" beforeDir="false" afterPath="$PROJECT_DIR$/天狼星注入器/无名指1.8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/src/main/java/com/ax/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/src/main/res/drawable-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/src/main/res/drawable-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/src/main/res/drawable-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/src/main/res/drawable-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/src/main/res/layout/main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/src/main/res/layout/main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/src/main/res/values-v21/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/天狼星注入器/无名指1.8/app/src/main/res/values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星网络验证" beforeDir="false" afterPath="$PROJECT_DIR$/天狼星网络验证" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星网络验证/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/天狼星网络验证/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星网络验证/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/天狼星网络验证/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星网络验证/app/src/main/java/com/php/MainActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/天狼星网络验证/app/src/main/res/layout/main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/天狼星网络验证/app/src/main/res/layout/main.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,18 +71,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/bin/zip/ZipFile.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="201" column="5" lean-forward="true" selection-start-line="201" selection-start-column="5" selection-end-line="201" selection-end-column="5" />
+            <state relative-caret-position="186">
+              <caret line="188" column="20" selection-start-line="188" selection-start-column="20" selection-end-line="188" selection-end-column="20" />
               <folding>
-                <element signature="e#6620#6621#0" expanded="true" />
-                <element signature="e#6654#6655#0" expanded="true" />
-                <element signature="e#6918#6919#0" expanded="true" />
-                <element signature="e#6966#6967#0" expanded="true" />
-                <element signature="e#8112#8113#0" expanded="true" />
-                <element signature="e#8152#8153#0" expanded="true" />
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/MyApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="328">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_jie_chi.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/JieChiActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="604">
+              <caret line="86" column="32" lean-forward="true" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="205" column="74" selection-start-line="205" selection-start-column="74" selection-end-line="205" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="72" column="25" lean-forward="true" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/util/AssetsUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/fragment/MainFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="1320" column="24" selection-start-line="1320" selection-start-column="24" selection-end-line="1320" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,9 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/kellinwood/security/zipsigner/ZipSigner.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/btn_gray.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/xiankuang.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/layout_floating.xml" />
@@ -110,8 +215,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/card_about_1.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_setting.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/util/AppUtils.java" />
         <option value="$PROJECT_DIR$/app/src/test/java/ma/mhy/apkhook/ExampleUnitTest.java" />
@@ -127,14 +230,11 @@
         <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/OpenAccessibilitySettingHelper.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/activity/FloatActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/l.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/MyApplication.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/a.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/aService.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/Activity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/fragment/MainFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/bin/zip/encoding/ZipEncoding.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/axml/utils/StringUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/bin/zip/ZipOutputStream.java" />
@@ -144,6 +244,14 @@
         <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/axml/utils/Charsets.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/bin/zip/ZipFile.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/axml/utils/IOUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/MyApplication.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/run.sh" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/fragment/MainFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_jie_chi.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/JieChiActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -159,19 +267,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="AndroidView">
-        <subPane>
-          <expand>
-            <path>
-              <item name="APKHook" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -275,38 +370,54 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
             </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView">
+        <subPane>
+          <expand>
             <path>
-              <item name="APKHook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APKHook" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="drawable" type="462c0819:PsiDirectoryNode" />
+              <item name="APKHook" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
             </path>
             <path>
-              <item name="APKHook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APKHook" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="values" type="462c0819:PsiDirectoryNode" />
+              <item name="APKHook" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
-              <item name="APKHook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="APKHook" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
-              <item name="xml" type="462c0819:PsiDirectoryNode" />
+              <item name="APKHook" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="ma" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="APKHook" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="ma" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="mhy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="APKHook" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="ma" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="mhy" type="462c0819:PsiDirectoryNode" />
+              <item name="apkhook" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="APKHook" type="1abcf292:AndroidViewProjectNode" />
+              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Course" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -324,14 +435,11 @@
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\AndroidProject\APKHook\app\src\main\res\mipmap-hdpi" />
+    <key name="android.template.packageName">
+      <recent name="ma.mhy.apkhook" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="ma.mhy.apkhook" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ma.mhy.apkhook.kellinwood.logging" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\AndroidProject\APKHook\app\libs" />
@@ -339,6 +447,13 @@
       <recent name="D:\AndroidProject\APKHook\app\src\main\res\layout" />
       <recent name="D:\AndroidProject\APKHook\app\src\main\res\xml" />
       <recent name="D:\AndroidProject\APKHook\app\src\main\res\mipmap-xxxhdpi" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ma.mhy.apkhook.kellinwood.logging" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\AndroidProject\APKHook\app\src\main\assets" />
+      <recent name="D:\AndroidProject\APKHook\app\src\main\res\mipmap-hdpi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -451,22 +566,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info id="Build Variants" order="1" side_tool="true" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="设计器" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.22012103" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.19818456" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Structure" order="7" side_tool="true" />
       <window_info id="Resources Explorer" order="8" />
       <window_info anchor="bottom" id="Run" order="0" />
-      <window_info anchor="bottom" id="Android Profiler" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Android Profiler" order="1" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.50226927" side_tool="true" weight="0.26554623" />
-      <window_info anchor="bottom" id="构建" order="4" sideWeight="0.4977307" weight="0.26517573" />
+      <window_info anchor="bottom" id="构建" order="4" sideWeight="0.4977307" weight="0.26510066" />
       <window_info anchor="bottom" id="Logcat" order="5" sideWeight="0.4988086" weight="0.394958" />
       <window_info anchor="bottom" id="Flutter Performance" order="6" side_tool="true" />
       <window_info anchor="bottom" id="SmartIM" order="7" />
@@ -476,7 +592,7 @@
       <window_info anchor="bottom" id="Alipay DevTools" order="11" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="Debug" order="13" />
-      <window_info anchor="bottom" id="Find" order="14" weight="0.3277311" />
+      <window_info anchor="bottom" id="Find" order="14" visible="true" weight="0.18456376" />
       <window_info active="true" anchor="bottom" id="Messages" order="15" visible="true" weight="0.28115016" />
       <window_info anchor="bottom" id="DevEco Output" order="16" weight="0.3290735" />
       <window_info anchor="right" id="ActivityLauncher" order="0" side_tool="true" />
@@ -540,43 +656,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="逆向注入 apk dex  smali" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://E:/android-sdk-windows/sources/android-28/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="22796" column="16" selection-start-line="22796" selection-start-column="16" selection-end-line="22796" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="64" column="30" selection-start-line="64" selection-start-column="30" selection-end-line="64" selection-end-column="30" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.angads25/filepicker/1.1.1/36da4e3f1414b663a6c1770a971c11aafb768500/filepicker-1.1.1-sources.jar!/com/github/angads25/filepicker/view/FilePickerDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="130" column="30" selection-start-line="130" selection-start-column="30" selection-end-line="130" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_setting.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-38">
-          <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/util/AppUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -612,13 +691,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
           <caret line="122" column="77" selection-start-line="122" selection-start-column="77" selection-end-line="122" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/util/AssetsUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
@@ -799,13 +871,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/MyApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="35" column="63" selection-start-line="35" selection-start-column="63" selection-end-line="35" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -824,26 +889,6 @@
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="33" column="7" lean-forward="true" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/fragment/MainFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="134" column="63" selection-start-line="134" selection-start-column="63" selection-end-line="134" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/bin/zip/encoding/ZipEncoding.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -906,16 +951,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/bin/zip/ZipFile.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="201" column="5" lean-forward="true" selection-start-line="201" selection-start-column="5" selection-end-line="201" selection-end-column="5" />
+        <state relative-caret-position="246">
+          <caret line="201" column="5" selection-start-line="201" selection-start-column="5" selection-end-line="201" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="188" column="20" selection-start-line="188" selection-start-column="20" selection-end-line="188" selection-end-column="20" />
           <folding>
-            <element signature="e#6620#6621#0" expanded="true" />
-            <element signature="e#6654#6655#0" expanded="true" />
-            <element signature="e#6918#6919#0" expanded="true" />
-            <element signature="e#6966#6967#0" expanded="true" />
-            <element signature="e#8112#8113#0" expanded="true" />
-            <element signature="e#8152#8153#0" expanded="true" />
+            <element signature="e#0#27#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/MyApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="328">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/run.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="45" selection-start-column="45" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/util/AssetsUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/fragment/MainFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="1320" column="24" selection-start-line="1320" selection-start-column="24" selection-end-line="1320" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_jie_chi.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/JieChiActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="86" column="32" lean-forward="true" selection-start-line="86" selection-start-column="32" selection-end-line="86" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="72" column="25" lean-forward="true" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ma/mhy/apkhook/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="205" column="74" selection-start-line="205" selection-start-column="74" selection-end-line="205" selection-end-column="74" />
         </state>
       </provider>
     </entry>

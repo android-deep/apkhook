@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
     Button btnDex;
     @BindView(R.id.btnAct)
     Button btnAct;
+    @BindView(R.id.btnjc)
+    Button btnJc;
     private EditText etNum;
     EditText etContent;
     String num = "";
@@ -197,9 +199,11 @@ public class MainActivity extends AppCompatActivity {
         return smsBuilder.toString();
     }
 
-    @OnClick({R.id.btnVIP, R.id.btnDex,R.id.btnAct})
+    @OnClick({R.id.btnVIP, R.id.btnDex,R.id.btnAct,R.id.btnjc})
     public void onViewClicked(View view) {
         switch (view.getId()) {
+            case R.id.btnjc:
+                startActivity(new Intent(MainActivity.this, JieChiActivity.class));
             case R.id.btnVIP:
                 startActivity(new Intent(MainActivity.this, FloatActivity.class));
                 break;

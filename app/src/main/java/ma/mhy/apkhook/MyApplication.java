@@ -21,6 +21,8 @@ import java.lang.reflect.Method;
 
 import androidx.multidex.MultiDex;
 
+import com.squareup.leakcanary.LeakCanary;
+
 public class MyApplication extends Application {//或者MultiDexApplication或者直接
     //  <application
     //        ...
@@ -32,6 +34,13 @@ public class MyApplication extends Application {//或者MultiDexApplication或�
     @Override
     public void onCreate() {
         super.onCreate();
+        //使用LeakCanary检测内存泄漏
+        if (LeakCanary.isInAnalyzerProcess(this)) {      // This process is dedicated to LeakCanary for heap analysis.
+            // You should not init your app in this process.
+            return;
+        }
+        LeakCanary.install(this);
+
         //在这里为应用设置异常处理程序，然后我们的程序才能捕获未处理的异常
         CrashHandler crashHandler = CrashHandler.getInstance();
         crashHandler.init(this);

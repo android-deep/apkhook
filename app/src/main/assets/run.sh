@@ -1,0 +1,1 @@
+screenrecord --time-limit 30 /sdcard/demo.mp4

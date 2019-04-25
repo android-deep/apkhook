@@ -1323,7 +1323,7 @@ public class MainFragment extends Fragment implements OnClickListener, DialogSel
             builder.setIgnoreMethodAndFieldError(true);
             showmsg("读取dex.....");
             if (!custom) {
-                //单例模式
+                //单例模式    HashSet 
                 DexBackedDexFile classes = DexBackedDexFile.fromInputStream(Opcodes.getDefault(), new BufferedInputStream(new BufferedInputStream(zip.getInputStream(zip.getEntry(maindex)))));
                 DexBackedDexFile data = DexBackedDexFile.fromInputStream(Opcodes.getDefault(), new BufferedInputStream(getActivity().getAssets().open("data.dat")));
                 final Set<? extends DexBackedClassDef> l = new HashSet<>();

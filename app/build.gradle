@@ -186,4 +186,9 @@ dependencies {
 //    implementation 'com.madgag.spongycastle:pkix:1.53.0.0'
 //    implementation 'com.madgag.spongycastle:prov:1.53.0.0'
 //    implementation 'com.madgag.spongycastle:core:1.53.0.0'
+//使用LeakCanary检测内存泄漏
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.1'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
+    testImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.1'
+
 }
